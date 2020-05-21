@@ -1,0 +1,115 @@
+.date-content {
+        min-height: 400px;
+        background-color: #F7F8FD;
+    }
+
+    .date-content .picker {
+        height: 0.5rem;
+        white-space: nowrap;
+        display: flex;
+    }
+
+    .date-content .picker .pick {
+        width: 50%;
+        line-height: 0.5rem;
+        display: flex;
+    }
+
+    .date-content .pick .title-font {
+        font-weight: bold;
+    }
+
+    .date-content .pick .left-arr {
+        flex: 1;
+        height: 0.5rem;
+        /* background: url(/mobile/libs/imgs/pick_arr_left.png) no-repeat 0.15rem; */
+        background-size: 0.1rem 0.17rem;
+    }
+
+    .date-content .pick .right-arr {
+        flex: 1;
+        height: 0.5rem;
+        /* background: url(/mobile/libs/imgs/pick_arr_right.png) no-repeat 0.52rem; */
+        background-size: 0.1rem 0.17rem;
+    }
+
+    .date-content .pick-date .week {
+        height: 0.36rem;
+        margin-bottom: 0.05rem;
+        background-color: #fff;
+        display: flex;
+    }
+
+    .date-content .pick-date .week li {
+        flex: 1;
+        line-height: 0.36rem;
+        color: #111;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .date-content .pick-date .day {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .date-content .pick-date .day li {
+        position: relative;
+        width: 14.28%;
+        height: 0.58rem;
+        margin-bottom: 0.05rem;
+        line-height: 0.58rem;
+        color: #111;
+        font-weight: bold;
+        text-align: center;
+        background-color: #fff;
+    }
+
+    .date-content .pick-date .day li:nth-child(7n),
+    .date-content .pick-date .day li:nth-child(7n-6) {
+        color: #EC7545;
+    }
+
+    .date-content .pick-date .day li.disabled {
+        color: #A4A6A8;
+        background-color: #F7F8FD;
+    }
+
+    .date-content .pick-date .day li.in {
+        background-color: #FAC809;
+    }
+
+    .date-content .pick-date .day li.out {
+        background-color: #FAC809;
+    }
+
+    .date-content .pick-date .day li.is_before {
+        background-color: #f9f9f9;
+    }
+
+    .date-content .pick-date .day li.between {
+        background-color: #F2F6FC;
+    }
+
+    .date-content .pick-date .day li.full::after {
+        content: '满';
+        display: inline-block;
+        position: absolute;
+        top: -0.16rem;
+        right: 0.09rem;
+        color: #EC7240;
+        font-size: 11px;
+    }
+
+    .date-content .pick-date .day .status {
+        position: absolute;
+        line-height: 14px;
+        bottom: 6px;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .date-content .day .in .status, .date-content .day .out .status {
+        display: block;
+    }

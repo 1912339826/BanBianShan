@@ -1,0 +1,37 @@
+<!--components/order/reserveRule/reserveRule.wxml-->
+<!-- 提交订单中房费订房规则 -->
+<view class="reserveRule">
+  <view class="title" wx:if="{{member=='false'}}">房费订房规则</view>
+  <view class="title" wx:else>押金订房规则</view>
+  <view class="options">
+    <van-radio-group value="{{ radio }}" bind:change="onChange">
+      <view wx:if="{{member=='false'}}">
+        <view class="optionsbox" style="{{optionsboxone}}pointer-events: none;">
+          <van-radio name="1" checked-color="#C19A55" icon-size="30px"> <text style="{{colorone}}">房费订房</text></van-radio>
+        </view>
+      </view>
+
+      <view wx:else class="yes">
+        <view class="optionsbox" style="{{optionsboxone}}">
+          <van-radio name="1"  checked-color="#C19A55" icon-size="30px"> <text style="{{colorone}}" >押金订房</text> </van-radio>
+        </view>
+
+        <view class="optionsbox" style="{{optionsboxtwo}}">
+          <van-radio name="2" checked-color="#C19A55" icon-size="30px"> <text style="{{colortwo}}" >免押金订房</text> </van-radio>
+        </view>
+      </view>
+
+
+    </van-radio-group>
+  </view>
+
+  <view class="txt" wx:if="{{radio=='1'}}">
+    <text>可提前72小时(以预订入住日14:00起倒推)取消预订，届时，</text>
+    <text>预定平台将扣除3%的保证金作为手续费。72小时内不予取消，预付的保证金不予退还。</text>
+  </view>
+
+    <view class="txt" wx:else>
+    <text>会员可选择购买商城内的其他产品或服务以换取免保证金订房的权利，同样的，为防止霸房、损害物品等情形，</text>
+    <text>会员购买的其他产品或服务若无质量问题，会员同意不适用七天无理由退货规则。如会员执意退货，将按照保证金退订的计算方式扣除手续费</text>
+  </view>
+</view>

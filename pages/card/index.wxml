@@ -1,0 +1,26 @@
+<topnav header="{{title}}"></topnav>
+
+<view class="card_list_wrap">
+<!--pages/order/index.wxml-->
+
+  <view class="statelist">
+    <van-tabs active="{{ active }}" 
+    swipe-threshold="{{swipethreshold}}" 
+    bind:change="handleChange" color="#C19A55" sticky animated>
+      <van-tab title="卡片购买">
+      
+      </van-tab>
+      <van-tab title="使用记录">
+       
+      </van-tab>
+    </van-tabs>
+  </view>
+
+    <view class="card_list" wx:if="{{tabShow == 0}}">
+      <cardIndex wx:for='{{buyLog}}' order_number="{{item.order_number}}" create_time="{{item.create_time}}" card_name="{{item.card_name}}" price="{{item.price}}" card_meal="{{item.card_meal}}" />
+    </view>
+    <view class="card_list" wx:if="{{tabShow == 1}}">
+      <cardIndex wx:for='{{useLog}}' order_number="{{item.order_number}}" create_time="{{item.create_time}}" card_name="{{item.card_name}}" use_show="{{item.use_show}}" />
+    </view>
+
+</view>

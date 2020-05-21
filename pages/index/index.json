@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "zooid": "/components/zooid/zooid"
+  }
+}

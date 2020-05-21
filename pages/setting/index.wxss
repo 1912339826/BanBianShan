@@ -1,0 +1,4 @@
+.setting_wrap .avartor{
+  width: 100rpx;
+  height: 100rpx;
+}

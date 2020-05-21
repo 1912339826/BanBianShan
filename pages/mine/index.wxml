@@ -1,0 +1,86 @@
+<view class="mine_wrap gray3 fs26">  
+    <image src="/public/nav/mine_nav.png" class="mine_page_head w100"></image>
+    <view class="flex-rb flex-ac p40 mine_page_info" wx:if="{{userInfo}}">
+          <view class="flex-ac">
+            <view class="mine_avar ">
+            <image src="{{userInfo.head}}" wx:if="{{userInfo.head}}"></image>
+            <image src="/public/nav/logo.png" wx:else></image>
+          </view>
+          <view class="p30 mine_avar_right">
+              <view class="flex-ac f5 fs36 mine_avar_right_top">
+                  <text>{{userInfo.nickname || userInfo.phone}}</text>
+                  <image src="/public/icon@3x/icon_arrow_grey_big@3x.png"></image>
+              </view>
+              <view class="flex-cc fs22 mine_avar_right_down cf m-t-20">
+                <image src="/public/icon@3x/icon_hotel_particulars_people@3x.png"></image>
+                <text class="p-l-5" wx:if="{{is_vip == 1}}">会员用户</text>
+                <text class="p-l-5" wx:else>普通用户</text>
+
+              </view>
+          </view>
+      </view>
+      <view class="fs40" catchtap="handleTab" data-type="1">
+        <van-icon name="setting-o" />
+      </view>
+    </view>
+    <view class="flex-rb flex-ac p40 mine_page_info" wx:else>
+          <view class="flex-ac">
+            <view class="mine_avar ">
+            <image src="/public/nav/logo.png"></image>
+          </view>
+          <view class="p30 mine_avar_right">
+              <view class="flex-ac f5 fs36 mine_avar_right_top">
+                  <text bindtap="login">立即登录</text>
+                  <image src="/public/icon@3x/icon_arrow_grey_big@3x.png"></image>
+              </view>
+              <view class="flex-cc fs22 mine_avar_right_down cf m-t-20">
+                <image src="/public/icon@3x/icon_hotel_particulars_people@3x.png"></image>
+                <text class="p-l-5">游客</text>
+              </view>
+          </view>
+      </view>
+      <view class="fs40" catchtap="handleTab" data-type="1">
+        <van-icon name="setting-o" />
+      </view>
+    </view>
+
+    <view class="p40 mine_page_center m-t-10" catchtap="handleTab" data-type="2">
+        <image src="/public/nav/card_nav.png" class="w100"></image>
+        <view class="open_btn b21 flex-cc cf">
+          <text>立即开卡</text>
+        </view>
+    </view>
+
+    
+
+     <view class="p40 mine_page_form ">
+        <view class="flex-rb flex-ac p-t-30 p-b-30 b-b-0" bindtap="toCardBind">
+           <view class="flex-ac fs28 f5" bindtap="toCardBind" data-type="3">
+             <image src="/public/icon@3x/icon_me_binding@3x.png"></image>
+              <text>实体卡绑定</text>
+           </view>
+           <view class="grayc1">
+            购买过实体黑金卡的用户点击此处绑定
+           </view>
+        </view>
+         <view class="flex-rb flex-ac p-t-30 p-b-30 b-b-0" bindtap="toCardLog" wx:if="{{card_log}}">
+           <view class="flex-ac fs28 f5" bindtap="toCardLog" data-type="3">
+             <image src="/public/icon@3x/icon_me_record@3x.png"></image>
+              <text>卡片记录</text>
+           </view>
+           <view class="grayc1">
+            使用记录
+           </view>
+        </view>
+        <view class="flex-ac fs28 f5  p-t-30 p-b-30 b-b-0" bindtap="toVipCardRule">
+           <image src="/public/icon@3x/icon_me_rule@3x.png"></image>
+           <text>黑金卡规则</text>
+        </view>
+        <view class="flex-ac fs28 f5  p-t-30 p-b-30 b-b-0" bindtap="linkUs">
+           <image src="/public/icon@3x/icon_me_connect@3x.png"></image>
+           <text>联系我们</text>
+        </view>
+    </view>
+
+
+</view>

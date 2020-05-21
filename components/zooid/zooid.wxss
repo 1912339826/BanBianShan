@@ -1,0 +1,103 @@
+@import "../../app.wxss";
+.zooid {
+  font-family: "苹方-简 中黑体";
+}
+
+.zooid .zooidbox{
+  margin-bottom: 30rpx;
+}
+
+.zooid .img {
+  position: relative;
+}
+
+.zooid .cornermark {
+  width: 131rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  text-align: center;
+  background-color: #c1172e;
+  color: #fff;
+  position: absolute;
+  top: 15rpx;
+  right: 0;
+  font-size: 20rpx;
+}
+
+.zooid .nameandmoney {
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.zooid .name {
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #333;
+  font-size: 28rpx;
+  font-weight: Medium;
+}
+
+.zooid .money {
+  font-weight: Medium;
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #c73246;
+}
+
+.zooid .siteanddistance {
+  display: flex;
+  font-size: 20rpx;
+  color: #c1c1c1;
+  margin-top: 11rpx;
+  font-weight: Regular;
+}
+
+.zooid .icon {
+  margin-left: 22rpx;
+  margin-right: 6rpx;
+  width: 16rpx;
+  height: 19rpx;
+}
+
+.zooid .tagandbutton {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rpx;
+}
+
+.zooid .tag {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 520rpx;
+}
+
+.zooid .tags {
+  padding: 0rpx 10rpx;
+  font-weight: Regular;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-right: 8rpx;
+  color: #666;
+  font-size: 20rpx;
+  text-align: center;
+  border: 1rpx solid #999;
+  margin-bottom: 5rpx; 
+}
+
+.zooid .tag_active {
+  color: #c4253b;
+  border-color: #c4253b;
+}
+
+.zooid .button {
+  width: 182rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  text-align: center;
+  background-image: linear-gradient(#d0ae72, #c69b51);
+  color: #fff;
+  font-weight: Regular;
+  font-size: 26rpx;
+}

@@ -1,0 +1,39 @@
+<topnav header="{{title}}"></topnav>
+<view class="setting_wrap gray3 fs26">
+  <view class="p40 bf b-b-1">
+    <text>绑定实体卡，立享会员权益</text>
+  </view>
+   <view class="flex-rb flex-ac bf p40">
+    <text class="f5">手机号码绑定</text>
+    <view class="flex-ac grayc1 fs28">
+        <text class="p-r-5">189****9090</text>
+         <van-icon name="arrow" class="fs20"/>
+    </view>
+  </view>
+
+   <view class="flex-rb flex-ac bf p30">
+    <text class="f5">微信绑定</text>
+    <view class="flex-ac cr fs28">
+        <text>未绑定</text>
+    </view>
+  </view>
+
+     <view class="flex-rb flex-ac bf p30">
+    <text class="f5">昵称</text>
+    <view class="flex-ac grayc1 fs28">
+        <text class="p-r-5">189****9090</text>
+         <van-icon name="arrow"  class="fs20"/>
+    </view>
+  </view>
+</view>
+
+<view class="btn_sub_empty">
+
+</view>
+<view class="btn_sub_wrap">
+  <view class="bf p40 p-t-20 p-b-20">
+      <view class="btn-sub cf flex-cc fs32">
+        <text>立即绑定</text>
+      </view>
+  </view>
+</view>

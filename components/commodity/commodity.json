@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "row":"/dist/row/index",
+    "col":"/dist/col/index",
+    "ccon":"/dist/icon/index"
+  }
+}

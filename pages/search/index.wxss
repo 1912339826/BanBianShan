@@ -1,0 +1,72 @@
+page{
+  background-color: #fff !important;
+}
+.searchHeader_wrap{
+  position: fixed;
+  padding-top: 8rpx; 
+  top: 120rpx;
+  width: 100%;
+  z-index: 999;
+}
+.searchHeader_empty{
+  height: 200rpx;
+}
+.search_top_city image{
+  height: 29rpx;
+  width: 25rpx;
+}
+.search_top_text image{
+  width:27rpx;
+  height:28rpx;
+  padding-right: 5rpx; 
+}
+.search_top_city text{
+  padding-left: 10rpx; 
+  max-width: 120rpx;
+}
+.search_top_text text{
+  padding-left: 5rpx; 
+  max-width: 80rpx;
+}
+.search_top_city{
+  /* max-width:  */
+}
+.search_top_text{
+  width: 147rpx;
+  height:84rpx;
+background:rgba(244,244,244,1);
+border:1rpx solid rgba(193,193,193,1);
+}
+
+/* tab */
+.search_tag_wrap_left {
+  padding-left: 20rpx; 
+  width: 320rpx;
+}
+.search_tag_wrap_left .van-ellipsis{
+  width: 170rpx;
+}
+
+.search_tag_wrap_center .van-ellipsis{
+  padding-right: 10rpx; 
+  color: #C19A55; 
+}
+.search_tag_wrap .van-tab {
+  font-size: 32rpx;
+  color: #c1c1c1;
+  padding: 0;
+}
+.search_tag_wrap .van-tab--active{
+  color: rgba(193,154,85)
+}
+.search_tag_wrap .van-tabs__line{
+  left: 20rpx !important;
+  width: 56rpx !important;
+  top: 75rpx !important;
+  background:rgba(193,154,85,1)
+}
+.search_tag_wrap_right image{
+  width: 30rpx;
+  height: 30rpx;
+  padding-left: 5rpx; 
+}

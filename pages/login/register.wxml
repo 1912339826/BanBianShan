@@ -1,0 +1,27 @@
+<!--page/user/phoneLogin.wxml-->
+<view class="top">
+     <view class="top_title">
+        新用户注册 
+     </view>
+     <view class="f_title">
+        当前手机号未注册，现在为您创建账号，快去设置你的个性头像和昵称吧
+     </view>
+</view>
+<view class="avatar">
+    <image src="{{avatar}}" class="avatar_logo" wx:if="{{avatar}}"></image>
+    <image src="/public/nav/logo.png" class="avatar_logo" wx:else="{{avatar}}"></image>
+    <image src="/public/icon@2x/icon_signin_modify_head.png" class="avatar_edit" bindtap="uploadAvatar"></image> 
+</view>
+<form report-submit="{{true}}" bindsubmit="onLogin" class="page">
+    <view class="form-item doc-row align-justify col-center">
+        <view class="nick">昵称</view>
+        <input type="number" placeholder="请输入您的昵称"
+        placeholder-style="color:#C1C1C1"
+        value="{{nickname}}"
+        bindblur="bindNickName"
+        />
+    </view>
+    <view class="close" bindtap="release">×</view>
+    <view class="line mt30"></view>   
+    <button form-type="submit" class="loginbtn">登录</button>
+</form>

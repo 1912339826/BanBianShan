@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "topnav": "/components/topnav/topnav",
+    "CountDown": "/dist/count-down/index",
+    "RadioGroup":"/dist/radio-group/index",
+    "Radio":"/dist/radio/index",
+    "Icon":"/dist/icon/index",
+    "CellGroup":"/dist/cell-group/index",
+    "Cell":"/dist/cell/index"
+  }
+}

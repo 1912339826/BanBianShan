@@ -1,0 +1,17 @@
+{
+  "usingComponents": {
+    "topnav": "/components/topnav/topnav",
+    "reserveRule": "/components/order/reserveRule/reserveRule",
+    "van-field": "/dist/field/index",
+    "van-picker": "/dist/picker/index",
+    "van-popup": "/dist/popup/index",
+    "unsubscribepolicy": "/components/order/unsubscribepolicy/unsubscribepolicy",
+    "commonbtn":"/components/common/commonbtn/commonbtn",
+    "commodity":"/components/commodity/commodity",
+    "ccon":"/dist/icon/index",
+    "shoppingCart":"/components/shoppingCart/shoppingCart",
+    "Overlay":"/dist/overlay/index",
+    "RadioGroup":"/dist/radio-group/index",
+    "Radio":"/dist/radio/index"
+  }
+}

@@ -1,0 +1,13 @@
+<view class='redtop_wrap gray3'>
+ <view class='navtop_arrow' wx:if="{{isArrow}}" bindtap='goback'>
+  <van-icon name="arrow-left" />
+ </view>
+ <view class='navtop_arrow' wx:if="{{!isArrow}}">
+
+ </view>
+  <view class='navtop_mine'>
+    <text class='fs36 garyc '>{{header}}</text>
+  </view>
+</view> 
+  <view class="head_empty">
+  </view>

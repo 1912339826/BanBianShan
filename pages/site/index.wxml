@@ -1,0 +1,18 @@
+<!--pages/site/index.wxml-->
+<view class="site">
+  <topnav header="{{title}}" />
+  <view class="from">
+    <Field value="{{namevalue}}" bind:input="nameinput" type="text" placeholder="请输入姓名" label="姓名" />
+    <Field value="{{phonevalue}}" bind:input="phoneinput" type="number" placeholder="请输入电话" label="电话" />
+    <Field value="{{regionvalue}}" type="text" disabled placeholder="请输入地区" label="地区" bindtap="regionclick"/>
+    <Field value="{{streetvalue}}" bind:input="streetinput" type="text" placeholder="请输入街道" label="街道" />
+    <Field value="{{detailedvalue}}" bind:input="detailedinput" type="text" placeholder="请输入详细地址" label="详细地址" />
+  </view>
+
+  <view class="yes" bindtap="yesclick">
+  <view class="button">确定</view>
+  </view>
+  <Popup show="{{show}}" bind:click-overlay="clickoverlay" position="bottom">
+    <Area area-list="{{areaList}}" bind:cancel="cancel" bind:confirm="confirm" value="110101"/>
+  </Popup>
+</view>

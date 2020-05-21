@@ -1,0 +1,5 @@
+<!--pages/search/tag/index.wxml-->
+ <topnav header="{{title}}"></topnav>
+<view class="pageTag_wrap bf">
+  <searchTag routerIndex="{{routerIndex}}"></searchTag>
+</view>

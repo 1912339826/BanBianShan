@@ -1,0 +1,116 @@
+<!--pages/orderDetails/orderDetails.wxml-->
+<view class="orderDetails">
+  <topnav header="{{title}}" tolist="{{tolist}}" bind:backInfo="backInfo"></topnav>
+  <view class="orderstate">
+    <view>{{state}}</view>
+    <view class="time" wx:if="{{timeor}}"><text style="margin-right: 10rpx;">还有</text><CountDown id="CountDown" time="{{time}}" format="mm:ss" bindfinish = "finish"/> <text style="margin-left: 10rpx;">关闭订单</text>
+    </view>
+    <!-- <view class="time" wx:else>
+      <text>已超时</text>
+    </view> -->
+
+  </view>
+  <cardOrderdetails storename="{{storename}}" isname="{{isname}}" begin_time="{{begin_time}}" secimg="{{secimg}}" intervalinfo="{{intervalinfo}}" />
+  <view class="usermessage">
+    <view class="name">
+      <view class="key">入住人</view>
+      <view class="value">{{checkinperson}}</view>
+    </view>
+    <view class="phone">
+      <view class="key">联系电话</view>
+      <view class="value">{{phone}}</view>
+    </view>
+    <view class="remark">
+      <view class="key">备注</view>
+      <view class="value">{{remark}}</view>
+    </view>
+  </view>
+
+  <!-- 重：押金或者购物 -->
+  <view class="cashorgoods">  
+    <view class="way">
+      <view class="key">押金支付方式</view>
+      <view class="value" wx:if="{{type==1}}">押金</view>
+      <view class="value" wx:else>商品抵扣押金</view>
+    </view>
+
+    <view class="money" wx:if="{{type==1}}">
+      <view class="key">押金金额</view>
+      <view class="value">￥{{money}}</view>
+    </view>
+
+    <view wx:else class="details">
+      <view class="key">商品详情</view>
+    </view>
+
+    <view wx:if="{{type!=1}}" class="detailscontents" wx:for="{{iscommoditylist}}">
+      <view class="left">
+        <image src="{{item.picture[0].url}}"></image>
+        <view class="nameandmoney">
+          <view class="nameandnumber">
+            <view class="name">{{item.title}}</view>
+            <view class="number">x{{item.num}}</view>
+          </view>
+          <view class="money">¥{{item.prices}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{type!=1}}" class="siteandway">
+      <image src="/public/icon@3x/icon_location_black_big@3x.png"></image>
+      <view class="right">
+        <view class="way">{{consignee}} 17890909090</view>
+        <view class="site">{{address}}</view>
+      </view>
+    </view>
+
+    <view class="itemconditionandbutton" wx:if="{{type!=1}}">
+      <view class="itemcondition">
+        <view class="key">包裹:</view>
+        <view class="value">{{commoditystatustxt}}</view>
+      </view>
+      <view class="expressandcopy" wx:if="{{commoditystatus!=0}}">
+      <!-- <view class="expressandcopy"> -->
+        <view class="express">{{express}}：{{express_no}}</view>
+        <view class="copy" data-num="{{express_no}}"  bindtap="copy">复制</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="contactway">
+    <view class="contactwaybox">
+      <view class="key">联系民宿：</view>
+      <view class="value">{{store_phone}}</view>
+    </view>
+  </view>
+
+  <view class="time">
+    <view class="timebox">
+      <view class="key">下单时间：</view>
+      <view class="value">{{create_time}}</view>
+    </view>
+  </view>
+<!-- 此处，有无支付按钮(是否待支付)时的样式 -->
+  <view class="serial onetwocss" wx:if="{{timeor}}">
+    <view class="serialbox">
+      <view class="key">订单编号：</view>
+      <view class="value" style=" margin-right: 8rpx;">{{order_num}}</view>
+      <view class="copy" data-num="{{order_num}}" bindtap="copy">复制</view>
+    </view>
+  </view>
+
+    <view class="serial ssonetwocss" wx:else>
+    <view class="serialbox">
+      <view class="key">订单编号：</view>
+      <view class="value" style=" margin-right: 8rpx;">{{order_num}}</view>
+      <view class="copy" data-num="{{order_num}}" bindtap="copy">复制</view>
+    </view>
+  </view>
+
+  <view class="action" wx:if="{{timeor}}">
+    <view class="actionbox">
+      <view class="cancel" bindtap="finish">取消订单</view>
+      <view class="notarize" bindtap="goway">立即支付</view>
+    </view>
+  </view>
+</view>

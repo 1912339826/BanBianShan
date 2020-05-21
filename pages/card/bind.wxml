@@ -1,0 +1,78 @@
+<view class="top">
+   绑定实体卡，立享会员权益
+</view>
+<form report-submit="{{true}}" bindsubmit="bindSubmit">
+   <view class="form-item doc-row align-justify col-center">
+        <view class="left">
+          卡号
+        </view>
+        <input type="number" placeholder="请输入卡号"
+        placeholder-style="color:#C1C1C1"
+        name="cardNumber" 
+        value="{{cardNumber}}"
+        bindblur="bindCardNumber"
+        />
+  </view>
+  <view class="form-item doc-row align-justify col-center">
+        <view class="left">
+          卡片密码
+        </view>
+        <input type="password" placeholder="请输入卡片密码"
+        placeholder-style="color:#C1C1C1"
+        name="cardPassword" 
+        value="{{cardPassword}}"
+        bindblur="bindCardPassword"
+        />
+  </view>
+  <view class="form-item doc-row align-justify col-center">
+        <view class="left">
+          手机号码
+        </view>
+        <input type="number" placeholder="请输入手机号码"
+        placeholder-style="color:#C1C1C1"
+        name="phone" 
+        value="{{phone}}"
+        bindblur="bindPhone"
+        />
+  </view>
+  <view class="form-item doc-row align-justify col-center code-view">
+          <view class="left">
+            验证码
+          </view>
+          <input type="number" placeholder="请填写验证码"
+          placeholder-style="color:#C1C1C1"
+          name="code" 
+          value="{{code}}"
+          bindblur="bindCode"
+          />
+          <button bindtap="onShowValidImg" disabled="{{codeLoading}}" class="code">{{time>0?(time+"s后再试"):"获取验证码"}}</button>
+    </view>
+    <button form-type="submit" class="bindSubmit">立即绑定</button>
+</form>
+
+<view class="xieyi">
+   <checkbox-group bindchange="checkboxChange">
+      <checkbox value="" checked="" class="wx-checkbox-input" bindchange="checkboxChange"/>
+   </checkbox-group>
+   <view class="agree">我已阅读并同意<view class="yuedu" bindtap="toAgreement">《会员协议》</view></view>
+</view>
+
+<view class="dialog {{ showImgCode ? 'dialog-show' : ''}}">
+  <view class="overlay {{ showImgCode ? 'show' : ''}}">
+      <view class="close" bindtap="closeDialog">
+         ×
+      </view>
+      <view class="dialog-enter-imgcode">
+          <view class="title">请输入下方图片验证码</view>
+          <view class="input-w hairline-in-pseudo-fouredges">
+              <view class="input-kits">
+                  <input bindblur='bindCaptchaCode' value="{{captchaCode}}" focus="{{showImgCode}}" type="text" class="input-code"/>
+                  <image class="img-code" mode="aspectFill" src="{{captchaImg}}" bindtap="refreshCaptcha"></image>
+                  <view hidden='{{hideImgCodeError}}' class="icon-status error"></view>
+              </view>
+          </view>
+          <view hidden='{{hideImgCodeError}}' class="note">验证码错误，请重试</view>
+          <view class="ly-btn big theme" bindtap="onGetcode">下一步</view>
+      </view>
+  </view>
+</view>

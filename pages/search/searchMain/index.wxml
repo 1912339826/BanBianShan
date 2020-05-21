@@ -1,0 +1,54 @@
+<!--pages/search/tag/index.wxml-->
+<topnav header="{{title}}"></topnav>
+<view class="searchmain_wrap bf fs26 gray3 p40">
+  <view class="grayc1 search_head bf m-t-40">
+    
+    <van-search
+    value="{{inputVal}}"
+    placeholder="输入民宿名称搜索"
+    show-action
+    bind:change="handleChange"
+    bind:cancel="onCancel"
+>
+    </van-search>
+  </view>
+
+
+  <view class="search_List_wrap ">
+      <view class="search_history m-t-40" wx:if="{{isHistory}}">
+    <view class="flex-rb flex-ac m-b-40">
+     <text>历史记录</text>
+      <view wx:if="{{typeList.length>0}}" catchtap="handleDel">
+        <image src="/public/icon@3x/icon_search_history_delete@3x.png"></image>
+      </view>
+    </view>
+    <view class="flex search_tag_check">
+      <view class="flex-cc tag_check active" 
+      wx:for="{{typeList}}" 
+      wx:key="index" 
+      catchtap="handleTab"
+      data-info="{{item}}">
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+
+
+    </view>
+      <view class="search_List m-t-20" wx:else>
+        <view class="grayc1">
+          <text>以下是在【全部城市】搜索“{{inputVal}}”的搜索结果</text>
+        </view>
+        <view class="search_info b-b-1" 
+        wx:for="{{searchList}}" 
+        wx:key="index"
+        catchtap="handleSearch"
+        data-info="{{item}}"
+        
+        >
+           <text>{{item.name}}</text>
+        </view>
+      
+      </view>
+  </view>
+</view>
+

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "topnav": "/components/topnav/topnav",
+    "searchTag": "/components/searchTag/searchTag"
+  }
+}

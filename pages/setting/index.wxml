@@ -1,0 +1,41 @@
+<view class="setting_wrap gray3">
+<topnav header="{{title}}"></topnav>
+  <view class="m-t-20 m-b-20 flex-rb flex-ac bf p30">
+    <image src="{{head}}" class="avartor"   wx:if="{{head}}"></image>
+    <image src="{{userInfo.head}}" class="avartor"   wx:elif="{{userInfo.head}}"></image>
+    <image src="/public/nav/logo.png" class="avartor"   wx:else></image>
+    <view class="flex-ac grayc1 fs28" bindtap="upHead">
+        <text class="p-r-5">修改头像</text>
+         <van-icon name="arrow" class="fs20"/>
+    </view>
+  </view>
+
+   <view class="flex-rb flex-ac bf p30">
+    <text class="f5">手机号码绑定</text>
+    <view class="flex-ac grayc1 fs28" bindtap="changePhone">
+        <text class="p-r-5">{{userInfo.phone}}</text>
+         <van-icon name="arrow" class="fs20"/>
+    </view>
+  </view>
+
+
+     <view class="flex-rb flex-ac bf p30">
+    <text class="f5">昵称</text>
+    <view class="flex-ac grayc1 fs28" catchtap="handleTab" data-type="1">
+        <text class="p-r-5" wx:if="{{userInfo.nickname}}">{{userInfo.nickname}}</text>
+        <text class="p-r-5" wx:else>{{userInfo.phone}}</text>
+         <van-icon name="arrow"  class="fs20"/>
+    </view>
+  </view>
+</view>
+
+<view class="btn_sub_empty">
+
+</view>
+<view class="btn_sub_wrap">
+  <view class="bf p40 p-t-20 p-b-20">
+      <view class="btn-sub cf flex-cc fs32" bindtap="logout">
+        <text>退出登录</text>
+      </view>
+  </view>
+</view>

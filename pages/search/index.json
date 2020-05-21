@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-tab": "/dist/tab/index",
+    "van-tabs": "/dist/tabs/index",
+    "van-dropdown-menu": "/dist/dropdown-menu/index",
+    "van-dropdown-item": "/dist/dropdown-item/index",
+    "topnav": "/components/topnav/topnav",
+    "btnDate": "/components/hotelDetail/btnDate/btnDate",
+    "zooid": "/components/zooid/zooid",
+    "searchTag": "/components/searchTag/searchTag"
+  }
+}

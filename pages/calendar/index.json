@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#ff4c2c",
+  "usingComponents": {
+    "topnav": "/components/topnav/topnav",
+    "calendar": "/components/calendar/calendar"
+  }
+}

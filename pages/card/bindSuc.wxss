@@ -1,0 +1,44 @@
+/* pages/card/bindSuc.wxss */
+
+.icon{
+   width: 140rpx;
+   height: 140rpx;
+   display: block;
+   margin: 250rpx auto 0;
+}
+
+.t1{
+  height:45rpx;
+  font-size:32rpx;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  line-height:45rpx;
+  text-align: center;
+  margin-top: 50rpx;
+}
+
+.t2{
+  height:37rpx;
+  font-size:26rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:37rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.detail{
+  width:670rpx;
+  height:88rpx;
+  background:rgba(255,255,255,1);
+  border:1px solid rgba(193,154,85,1);
+  line-height: 88rpx;
+  text-align: center;
+  margin:0 auto;
+  color: rgba(193,154,85,1);
+  font-size: 32rpx;
+  margin-top: 103rpx;
+}
+

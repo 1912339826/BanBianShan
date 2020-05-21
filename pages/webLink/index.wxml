@@ -1,0 +1,10 @@
+
+<view class="webLink_info">
+<view class="empty_webLink">
+</view>
+<web-view src="{{options.link}}"></web-view>
+</view>
+
+<!--pages/webLink/index.wxml-->
+<text>pages/webLink/index.wxml</text>
+

@@ -1,0 +1,118 @@
+@import "../../../app.wxss";
+
+.hotel_type {
+  position: relative;
+  /* background: #fff;
+  width: 100%;
+  height: 80%;
+  bottom: 0; */
+}
+
+.hotel_type_head_top {
+  padding: 40rpx;
+}
+
+.hotel_type_head_top image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.hotel_type_head_swiper .pre_swiper {
+  width: 100rpx;
+  overflow-x: hidden;
+  height: 444rpx;
+}
+
+.hotel_type_head_swiper .next_swiper {
+  width: 100rpx;
+  overflow-x: hidden;
+  height: 444rpx;
+}
+
+.hotel_type_head_item {
+  width: 90% !important;
+  margin: 0 auto;/* background: red; *//* transform: translate(90%, 0px) !important; */
+}
+
+.hotel_type_head_swiper .current_swiper {
+  width: 95%;
+  padding-left: 5%;
+  height: 444rpx;
+}
+
+.btn_right {
+  height: 84rpx;
+  border: 1rpx solid #333;
+}
+
+.hotel_type_info .btn_check {
+  width: 51rpx;
+}
+
+.hotel_type_info .btn_center {
+  width: 171rpx;
+  border-left: 1rpx solid #333;
+  border-right: 1rpx solid #333;
+}
+
+.hotel_type_des {
+  width: 200rpx;
+  padding: 20rpx 0;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(227, 227, 227, 1);
+}
+
+.hotel_type_des image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.hotel_type_des .show_btn_pic {
+  width: 18rpx;
+  height: 18rpx;
+  padding-left: 3rpx;
+}
+
+.hotel_type_info .hotel_type_des_down {
+  width: 100%;
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(227, 227, 227, 1);
+}
+.hotel_type_info .hotel_type_des_down>view{
+  padding: 0 30rpx;
+}
+.hotel_icon_list{
+  flex-flow: row wrap;
+}
+.hotel_icon_list>view{
+  width: 33.3%;
+  padding-bottom: 40rpx;
+}
+.hotel_icon_list image{
+  width: 45rpx;
+  height: 45rpx;
+}
+.hotel_type_down_sub_empty{
+  height: 170rpx;
+
+}
+.hotel_type_des_icon_left{
+  width:35%;
+  text-align: left;
+
+}
+.hotel_type_des_icon_center{
+  width:35%;
+   
+}
+.fixed{
+  width: 100%;
+  position: fixed; 
+  top: 0; 
+  z-index: 99999;
+  background: #fff;
+}
+.hotel_type_empty{
+  height: 300rpx;
+}

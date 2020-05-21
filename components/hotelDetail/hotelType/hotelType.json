@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "btnDate": "../btnDate/btnDate",
+   "van-sticky": "/dist/sticky/index"
+  }
+}

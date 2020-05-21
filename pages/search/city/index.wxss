@@ -1,0 +1,33 @@
+/* pages/search/city/index.wxss */
+page{
+  background-color: #fff !important;
+}
+.city_select_wrap{
+  z-index: 1;
+}
+.city_head{
+  padding-left: 30rpx; 
+  line-height: 108rpx;
+}
+.city_all_index{
+  position: fixed;
+  top: 130rpx;
+  right: 10rpx;
+}
+.city_info{
+  line-height: 98rpx;
+  padding: 0 30rpx;
+}
+.city_select_wrap .van-index-anchor{
+  padding: 10rpx 30rpx;
+  margin-right: 76rpx; 
+  background-color: #F3E9DD;
+  color: #C19A55;
+}
+.city_select_wrap .van-index-bar__index{
+ padding: 10rpx 0;
+ width: 76rpx;
+ text-align: center;
+ font-size: 28rpx;
+ color: #c1c1c1;
+}

@@ -1,0 +1,13 @@
+@import "../../app.wxss";
+.hotel_Detail .pic_self{
+  height: 444rpx;
+  overflow: hidden;
+}
+.hotel_detail_info{
+  padding: 30rpx 0;
+}
+.hotel_Detail  .info_right{
+  width:182rpx;
+line-height:52rpx;
+background:linear-gradient(180deg,rgba(208,174,114,1) 0%,rgba(198,155,81,1) 100%);
+}

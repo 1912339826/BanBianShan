@@ -1,0 +1,59 @@
+
+
+<topnav header="{{title}}"></topnav>
+<view class="searchList_wrap fs26 gray3">
+  <view class="searchHeader_wrap bf">
+    <view class="search_top_wrap flex-rb flex-ac p40"> 
+        <view class="search_top_city flex-ac" catchtap="handleTab" data-current="1">
+          <image src="/public/icon@3x/icon_location_black_big@3x.png"></image>
+          <text class="single-line fs28 f5">{{cityData.city_name || "全部城市"}}</text>
+        </view>
+        <view class="search_top_date">
+          <btnDate id="filter-date"></btnDate>
+        </view>
+         <view class="search_top_text flex-cc grayc1" catchtap="handleTab" data-current="2">
+         <image src="/public/icon@3x/icon_button_search_box@3x.png"></image>
+          <text class="single-line">{{search || "搜索"}}</text>
+        </view>
+    </view>
+    <view class="search_tag_wrap flex-rb flex-ac">
+        <view class="search_tag_wrap_left">
+         <van-tabs active="{{ activeIndex }}" 
+bind:change="tabChange"
+border="{{false}}">
+  <van-tab title="只看有房" class="fs26"></van-tab>
+  <van-tab title="查看全部"  class="fs26"></van-tab>
+</van-tabs>
+        </view>
+
+
+        <view class="search_tag_wrap_center">
+        <van-dropdown-menu active-color="#C19A55">
+  <van-dropdown-item value="{{ sort }}" options="{{ searchOption }}"  bind:change="handleSort"/>
+</van-dropdown-menu>
+        </view>
+        <view class="p40 search_tag_wrap_right flex-cc" catchtap="handleTab" data-current="3">
+          <text class='{{isTagCheck==true?"c5":""}}'>标签</text>
+          <image  src='{{isTagCheck==true? "/public/icon@3x/icon_tag_search_highlight@3x.png" : "/public/icon@3x/icon_tag_search_nor@3x.png"}}'></image>
+        </view>
+    </view>
+  </view>
+  <view class="searchHeader_empty">
+  </view>
+
+  <view class="searchList p40 m-t-10 m-b-40" 
+  wx:for="{{listStore}}" 
+  wx:key="index"
+  wx:if="{{!isTag}}">
+      <zooid listItem="{{item}}"></zooid>
+  </view>
+  <view class="default" wx:if="{{!isTag && listStore.length==0}}">
+  <image src="/public/icon@3x/icon_search_default@3x.png" class="defaultimg"></image>
+  <view class="txt grayc1">未找到符合条件的民宿</view>
+</view>
+  <view class="pageTag_wrap bf"  wx:if="{{isTag}}">
+      <searchTag bind:getTagInfo="getTagInfo"></searchTag>
+  </view>
+</view>
+
+

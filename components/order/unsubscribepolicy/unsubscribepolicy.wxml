@@ -1,0 +1,10 @@
+<!--components/order/unsubscribepolicy/unsubscribepolicy.wxml-->
+<!-- 退订政策 -->
+<view class="unsubscribepolicy">
+  <view class="title">
+    退订政策
+  </view>
+  <view class="txt">
+    {{card_policy}}
+  </view>
+</view>

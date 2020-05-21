@@ -1,0 +1,44 @@
+view, textarea {
+  box-sizing: border-box;
+}
+.maininfo{
+  word-wrap: break-word;
+    word-break: normal;
+}
+.default {
+  margin: 251rpx auto;
+  text-align: center;
+}
+
+.defaultimg {
+  width: 100rpx;
+  height: 105rpx;
+  margin-bottom: 22rpx;
+  margin-left: 13rpx;
+  margin-right: 13rpx;
+}
+
+.default>.txt {
+  text-align: center;
+  font-size: 25rpx;
+  height: 37rpx;
+  line-height: 37rpx;
+  color: #c1c1c1;
+  font-weight: 400;
+}
+/* pay */
+.payInfo_wrap image{
+  margin-top: 100rpx; 
+width:158rpx;
+height:158rpx;
+}
+.pay_text_wrap{
+  margin: 50rpx auto;
+}
+.pay_detail_btn{
+  width:670rpx;
+height:88rpx;
+margin: 50rpx auto;
+background:rgba(255,255,255,1);
+border:1rpx solid rgba(193,154,85,1);
+}

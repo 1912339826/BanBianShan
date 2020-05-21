@@ -1,0 +1,9 @@
+<view class="content">
+   <image src="/public/icon@2x/icon_pay_failure.png" class="suc_icon"/>
+   <view class="suc_text">
+      购买失败
+   </view>
+   <view class="check_view" bindtap="toMine">
+      再试一次
+   </view>
+</view>

@@ -1,0 +1,6 @@
+<!--components/defaultOrder/defaultOrder.wxml-->
+<!-- 订单列表的缺省 -->
+<view class="default">
+  <image src="/public/icon@3x/icon_search_default@3x.png" class="defaultimg"></image>
+  <view class="txt">还没有订单</view>
+</view>

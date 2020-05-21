@@ -1,0 +1,29 @@
+.flex {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.flex-ra{
+  display: flex;
+  justify-content: space-around;
+}
+.flex-rb{
+  display: flex;
+  justify-content: space-between;
+}
+.flex-rc{
+  display: flex;
+  justify-content: center
+}
+.flex-re{
+  display: flex;
+  justify-content: center
+}
+.flex-cc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-ac{
+  display: flex;
+  align-items: center;
+}

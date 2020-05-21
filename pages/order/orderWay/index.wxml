@@ -1,0 +1,42 @@
+<!--pages/order/orderWay/index.wxml-->
+<!-- 提交订单选择支付方式页面 -->
+<view class="orderWay">
+  <topnav header="{{title}}"></topnav>
+  <view class="content">
+    <view class="time">
+      <view>支付剩余时间</view>
+      <CountDown time="{{time}}" format="mm:ss" bindfinish="finish" />
+    </view>
+    <view class="money">
+        <view class="moneysymbol">￥</view>
+        <view class="moneycontent">{{money}}</view>
+    </view>
+    <view class="name">
+      <view>{{name}}</view>
+    </view>
+
+    <view class="select">
+      <view class="selecchild" id="1" bindtap="radioclick">
+        <view class="selecchildleft">
+          <image src="/public/icon@3x/icon_WeChat_Pay@3x.png"></image>
+          <view>微信支付</view>
+        </view>
+        <view>
+          <Icon wx:if="{{radio==1}}"  name="success" size="32px" color="#35B234" />
+        </view>
+      </view>
+
+      <!-- <view class="selecchild" id="2" bindtap="radioclick">
+        <view class="selecchildleft">
+          <image src="/public/icon@3x/icon_Alipay_pay@3x.png"></image>
+          <view>支付宝支付</view>
+        </view>
+        <view>
+          <Icon wx:if="{{radio==2}}" name="success" size="32px" color="#35B234" />
+        </view>
+      </view> -->
+    </view>
+  </view>
+
+  <button catchtap="alipay">立即支付</button>
+</view>

@@ -1,0 +1,114 @@
+/* components/cardOrder/cardOrder/cardOrderdetails.wxss */
+.cardOrderdetails {
+  padding: 30rpx 40rpx 40rpx 40rpx;
+  background-color: #fff;
+  width: 100%;
+  margin-top: 20rpx;
+  height: 281rpx;
+}
+
+.nameandstate {
+  display: flex;
+}
+
+.nameandimg {
+  display: flex;
+  align-items: center;
+}
+
+.nameandimg>.name {
+  margin-left: 13rpx;
+  font-size: 26rpx;
+  color: #333;
+  font-weight: 400;
+}
+
+.iconcardtabhone {
+  width: 22rpx;
+  height: 20rpx;
+}
+
+.iconarrowblacksmall {
+  width: 7rpx;
+  height: 13rpx;
+  margin-left: 10rpx;
+}
+
+.message {
+  margin-top: 40rpx;
+  display: flex;
+  height: 134rpx;
+}
+
+.messageimg {
+  width: 200rpx;
+  height: 134rpx;
+  margin-right: 30rpx;
+}
+
+.messagecontent>.name {
+  width: 440rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #333;
+  font-size: 28rpx;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.messagecontent>view:nth-child(2) {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  color: #c1c1c1;
+  font-size: 26rpx;
+  font-weight: 400;
+  widows: 368rpx;
+  height: 37rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.messagecontent>view:nth-child(3) {
+  color: #c1c1c1;
+  font-size: 26rpx;
+  font-weight: 400;
+}
+
+.cashandaction {
+  margin-top: 15rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cashandaction>.cash {
+  display: flex;
+}
+
+.cashandaction>.cash>.txt {
+  width: 139rpx;
+  height: 37rpx;
+  color: #333;
+  font-size: 26rpx;
+  font-weight: 400;
+}
+
+.cashandaction>.cash>.number {
+  color: #c1172e;
+  font-weight: 500;
+  font-size: 26rpx;
+}
+
+.cashandaction>.button {
+  width: 140rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  color: #fff;
+  font-size: 26rpx;
+  font-weight: 400;
+  background-image: linear-gradient(#d0ae72, #c69b51);
+  text-align: center;
+}

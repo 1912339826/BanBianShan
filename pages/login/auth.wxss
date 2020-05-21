@@ -1,0 +1,18 @@
+page{ background-color: #fff; }
+
+.panel-login{ padding-left: 80rpx; padding-right: 80rpx;padding-top: 158rpx;}
+.panel-login .info { position: relative; }
+.login-bg { position: absolute;top: 0;left: 0; width: 100%; height: 570rpx; }
+.info .logo {border:4px solid rgba(255,255,255,1); width: 140rpx; height: 140rpx; }
+.panel-login .logo-w{ width: 140rpx; width: 140rpx; }
+.tips { margin-top:192rpx ; }
+.auth-des{ text-align: left; }
+.auth-des .item{ position: relative; padding-left: 20rpx; }
+.auth-des .item:before{ content: ' '; position: absolute; left:0; top: 14rpx; width: 5rpx; height: 5rpx; border-radius: 100%; background-color: #999; }
+.goround { color: #526691;  }
+.btn-auth{ color:#fff; font-size: 30rpx; line-height: 45px; border-radius: 23px; font-weight: bold; background-image: linear-gradient(-60deg, #01E16C 0%, #03C360 88%); overflow: hidden; }
+.btn-auth .icon-auth{ width: 23px; height: 19px; margin-right: 6px; }
+.otherphone { background-image: none; color: #05C160; background-color: #F2F2F2; }
+
+
+ 

@@ -1,0 +1,7 @@
+@import './flex.wxss';
+@import './btn.wxss';
+@import './atom.wxss';
+@import './component.wxss';
+@import './icon.wxss';
+@import './reset.wxss';
+@import './font.wxss';

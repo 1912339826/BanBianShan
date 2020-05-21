@@ -1,0 +1,18 @@
+<view class="btn_date_wrap b5" catchtap="dateClick">
+      <view class="flex-ac cf flex-rb" >
+          <view class="tc">
+            <view class="fs28">{{currentArr[0]}}-{{currentArr[1]}}</view>
+            <text class="fs22">入住</text>
+          </view>
+          <view class="line_wrap">
+            <view class="bf tc line_top">
+             <text class="fs20 c5">{{dateInfo.length-1}}晚</text>
+            </view>
+            <view class="line"></view>
+          </view>
+          <view class="tc">
+            <view class="fs28">{{currentArr[2]}}-{{currentArr[3]}}</view>
+            <text class="fs22">离店</text>
+          </view>
+        </view>
+</view>

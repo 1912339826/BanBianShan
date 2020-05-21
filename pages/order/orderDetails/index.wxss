@@ -1,0 +1,303 @@
+/* pages/orderDetails/orderDetails.wxss */
+.orderDetails{
+  /* padding-bottom: 128rpx; */
+}
+
+.orderDetails .onetwocss{
+  margin-bottom: 168rpx;
+}
+
+.orderDetails .ssonetwocss{
+  margin-bottom: 48rpx;
+}
+
+.orderDetails .orderstate {
+  padding-left: 40rpx;
+  padding-top: 40rpx;
+  margin-bottom: 40rpx;
+  font-family: "苹方-简 中黑体";
+}
+
+.orderDetails .orderstate>view:nth-child(1) {
+  font-size: 36rpx;
+  color: #333;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-bottom: 10rpx;
+  font-weight: 500;
+  
+}
+
+.orderDetails .orderstate>.time {
+  font-size: 26rpx;
+  color: #333;
+  font-weight: 400;
+  display: flex;
+}
+
+/* 用户信息 */
+
+.orderDetails .usermessage {
+  background-color: #fff;
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.orderDetails .usermessage>.name, .usermessage>.phone, .usermessage>.remark {
+  height: 117rpx;
+  display: flex;
+  align-items: center;
+}
+
+.orderDetails .usermessage>.phone {
+  border-top: 1rpx solid hsla(0, 0%, 0%, 0.05);
+  border-bottom: 1rpx solid hsl(0, 0%, 0%, 0.05);
+}
+
+.orderDetails .usermessage .key {
+  color: #333;
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-weight: 500;
+  width: 112rpx;
+  margin-left: 40rpx;
+  margin-right: 76rpx;
+}
+
+.orderDetails .usermessage .value {
+  color: #333;
+  font-size: 26rpx;
+  font-weight: 400;
+  height: 37rpx;
+  line-height: 37rpx;
+}
+
+/* 押金或者押物 */
+
+.orderDetails .cashorgoods {
+  background-color: #fff;
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.orderDetails .cashorgoods>.way {
+  border-bottom: 1rpx solid hsl(0, 0%, 0%, 0.05);
+}
+
+.orderDetails .cashorgoods>.way, .cashorgoods>.money {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 118rpx;
+  line-height: 118rpx;
+}
+
+.orderDetails .cashorgoods .key {
+  color: #333;
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-weight: 500;
+  margin-left: 40rpx;
+}
+
+.orderDetails .cashorgoods .value {
+  color: #333;
+  font-size: 26rpx;
+  font-weight: 400;
+  height: 37rpx;
+  line-height: 37rpx;
+  margin-right: 40rpx;
+}
+
+.orderDetails .contactway, .orderDetails>.time, .orderDetails>.serial {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 108rpx;
+  background-color: #fff;
+  padding-left: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.orderDetails>.serial{
+  /* margin-bottom: 48rpx; */
+}
+
+.orderDetails .contactway>.contactwaybox, .orderDetails>.time>.timebox,
+.orderDetails>.serial>.serialbox {
+  color: #333;
+  height: 37rpx;
+  display: flex;
+  align-items: center;
+}
+
+.orderDetails .action {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 128rpx;
+  background-color: #fff;
+}
+
+.orderDetails .action>.actionbox {
+  display: flex;
+  height: 128rpx;
+  width: 100%;
+  align-items: center;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+
+.orderDetails .action>.actionbox>.cancel, .action>.actionbox>.notarize {
+  width: 322rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.orderDetails .action>.actionbox>.cancel {
+  color: #c19a55;
+  border: 2rpx solid #c19a55;
+  margin-right: 26rpx;
+}
+
+.orderDetails .action>.actionbox>.notarize {
+  color: #fff;
+  background-image: linear-gradient(#d0ae72, #c69b51);
+}
+
+.orderDetails .cashorgoods>.details {
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 39rpx;
+}
+
+.orderDetails .cashorgoods>.detailscontents {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  display: flex;
+  height: 182rpx;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid hsl(0, 0%, 0%, 0.05);
+}
+
+.orderDetails .cashorgoods>.detailscontents>.left {
+  display: flex;
+}
+
+.orderDetails .cashorgoods>.detailscontents>.left>image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+
+.orderDetails .cashorgoods>.detailscontents>.left>.nameandmoney>.nameandnumber {
+  display: flex;
+  justify-content: space-between;
+  width: 550rpx;
+}
+
+.orderDetails .cashorgoods>.detailscontents>.left>.nameandmoney>.nameandnumber>.name {
+  height: 37rpx;
+  line-height: 37rpx;
+  color: #333;
+  font-weight: 400;
+}
+
+.orderDetails .cashorgoods>.detailscontents>.left>.nameandmoney>.nameandnumber>.number {
+  font-weight: 400;
+  color: #c1c1c1;
+  height: 37rpx;
+  line-height: 37rpx;
+  font-size: 26rpx;
+}
+
+.orderDetails .cashorgoods>.detailscontents>.left>.nameandmoney>.money {
+  margin-top: 26rpx;
+  color: #c1c1c1;
+  font-size: 26rpx;
+  height: 37rpx;
+  line-height: 37rpx;
+  font-weight: 400;
+}
+
+/* 会员用户的联系电话和地址（商品详情） */
+
+.orderDetails .cashorgoods>.siteandway {
+  background-color: #fff;
+  padding-left: 40rpx;
+  display: flex;
+  align-items: center;
+  height: 146rpx;
+  width: 100%;
+}
+
+.orderDetails .cashorgoods>.siteandway>image {
+  width: 16rpx;
+  height: 19rpx;
+  margin-right: 10rpx;
+}
+
+.orderDetails .cashorgoods>.siteandway>.right>.way {
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-bottom: 4rpx;
+  font-weight: 500;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.orderDetails .cashorgoods>.siteandway>.right>.site {
+  color: #c1c1c1;
+  font-size: 20rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  font-weight: 400;
+}
+
+/* 包裹状态 */
+
+.orderDetails .cashorgoods>.itemconditionandbutton {
+  height: 110rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 40rpx;
+}
+
+.orderDetails .cashorgoods>.itemconditionandbutton>.itemcondition {
+  display: flex;
+  color: #333;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.orderDetails .expressandcopy{
+  display: flex;
+  align-items: center;
+}
+
+.orderDetails .copy {
+  border: 1rpx solid #dcdcdc;
+  width: 48rpx;
+  height: 32rpx;
+  line-height: 28rpx;
+  text-align: center;
+  color: #dcdccd;
+  font-size: 18rpx;
+  font-weight: 400;
+}
+
+.orderDetails .express{
+  color: #C1C1C1;
+  font-size: 20rpx;
+  font-weight: 400;
+  margin-right: 10rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+}

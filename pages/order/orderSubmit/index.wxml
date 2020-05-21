@@ -1,0 +1,169 @@
+<!--pages/orderSubmit/index.wxml-->
+<!-- 提交订单 -->
+<view class="orderSubmit">
+  <topnav header="{{title}}"></topnav>
+  <view class="ordername">
+    <image src="{{isimg}}"></image>
+    <view class="content">
+      <view class="name">{{name}}</view>
+      <view class="nameC">{{store_name}}</view>
+      <view class="money">
+        <view>房费 ¥{{roomcost}}</view>
+        <view>/间/晚</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="ordertime">
+    <view class="time">{{begin_time}} 至 {{end_time}}</view>
+    <view class="number">共{{wan}}晚 {{num}}间</view>
+  </view>
+
+  <reserveRule member="{{member}}" is_deposit_pay="{{is_deposit_pay}}" bind:isclick="isclick" />
+
+
+
+  <view class="ordertent" wx:if="{{isclicknum=='1'}}">
+    <view>{{name}} {{wan}}晚 {{num}}间</view>
+    <view>押金 ¥{{cashpledge}} x {{num*wan}}</view>
+  </view>
+
+  <view class="promptmessage" wx:else>
+    <text>您预订了：{{name}} {{wan}}晚{{num}}间，可从下列商品中</text>
+    <text style="text-decoration:underline;">任选{{num}}件或以上购买。</text>
+  </view>
+
+  <commodity tid="{{id}}" wx:if="{{isclicknum=='2'}}" bindcommodityclicknum="commodityclicknum" />
+
+  <view class="forms">
+    <view class="inputbox">
+      <van-field label='入住人' bindinput="nameinputInput" bindblur="blurInput" value="{{ form.name }}" placeholder="请输入入住人姓名" border="{{ false }}" />
+    </view>
+    <view class="inputbox">
+      <van-field label='联系电话' bindinput="phoneinputInput" bindblur="blurInput" value="{{ form.phone }}" placeholder="请输入联系电话" border="{{ false }}" />
+    </view>
+    <view class="inputbox">
+      <van-field label='备注' bindinput="remarksinputInput" bindblur="blurInput" value="{{ form.remark }}" placeholder="您的留言可在此备注给我们" border="{{ false }}" />
+    </view>
+  </view>
+
+  <!-- 商品收货地址 -->
+  <view class="site" wx:if="{{isclicknum=='2'}}" bindtap="gosite">
+    <view class="sitechild">
+      <ccon name="location-o" size="9.5px" color="#C1C1C1" />
+      <view class="nameandsite" wx:if="{{address.name!=''}}">
+        <view class="name">
+          {{address.name}} {{address.phone}}
+        </view>
+        <view class="issite">
+          {{address.address.region}}{{address.address.street}}{{address.address.address}}
+        </view>
+      </view>
+
+      <view wx:else style="color:#333333;font-size:28rpx;font-weight: 500;">
+        添加收货地址
+      </view>
+
+    </view>
+
+    <ccon name="arrow" size="8.5px" color="#C1C1C1" wx:if="{{address!=''}}" />
+  </view>
+
+  <!-- <view class="discount">
+    <view class="key">折扣方案</view>
+    <view class="valueandimg" bindtap="choice">
+      <view class="value">{{optfor}}</view>
+      <image src="/public/icon@3x/icon_arrow_grey__small@3x.png"></image>
+    </view>
+  </view> -->
+
+  <!-- 点击折扣方案中的右侧的按钮 -->
+  <van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+    <van-picker show-toolbar custom-class="customclass" default-index="{{defaultiIndex}}" columns="{{ columns }}" bind:cancel="onCancel" toolbar-class="toolbar" confirm-button-text="确定" bind:confirm="onConfirm" column-class="noac" active-class="yesac" />
+  </van-popup>
+
+  <!-- 黑金 -->
+  <view class="club" wx:if="{{member=='false'}}">
+    <view class="clubtitle">您还不是黑金卡用户，或您还没绑定您的黑金卡</view>
+    <view class="txt">您还不是黑金卡用户，或您还没绑定黑金卡，需支付相应的房费，加入会员，享全年免费入住特权。</view>
+    <view class="buttons">
+      <view bindtap="buycard">购买黑金卡</view>
+      <view bindtap="bindingcard">绑定黑金卡</view>
+    </view>
+  </view>
+
+  <view class="club" wx:else>
+    <view class="clubtitle f5">您是黑金卡用户</view>
+    <view class="txt">黑金卡用户订房时需要预付保证金，保证金以您预订页面的金额为准，注：办理入住时出示入住者本人黑金卡、刷卡且入住次数符合要求，我们将原路返还您预付的保证金。</view>
+  </view>
+
+  <!-- 退订政策 -->
+  <unsubscribepolicy/>
+  <commonbtn sum="{{sum}}" mychnageType="{{1}}" bindHYTchangeType="changeTypenumber" changeType="{{changeType}}" wx:if="{{isclicknum=='1'}}" />
+  <!-- ------ -->
+  <view class="HYT" wx:else></view>
+  <shoppingCart
+   bindHYTshoppingclick="shoppingclick" 
+   bindHYTchangeType="changeTypenumber" 
+   wx:if="{{isclicknum=='2'}}" 
+   shoppingnum="{{shoppingnum}}" 
+   sum="{{sum}}" 
+   need="{{num*wan}}" 
+   shoppingarr="{{shoppingarr}}" />
+
+  <van-popup z-index="80" closeable="{{istrue}}" show="{{iscartcontent}}" bind:close="iscartcontentclick" position="bottom">
+    <view class="carttop">
+      <view>已选商品</view>
+      <ccon name="clear" bindclick="iscartcontentclick" size="16px" color="#DBDBDB" />
+    </view>
+    <view class="cart">
+      <view wx:for="{{shoppingarr}}" class="cartlist">
+        <view>{{item.description}}</view>
+        <view>￥{{item.price}}</view>
+        <view>x{{item.num}}</view>
+        <view bindtap="cartdel" data-isid="{{item.id}}">删除</view>
+      </view>
+    </view>
+    <view class="HYT"></view>
+  </van-popup>
+
+  <van-popup bind:close="ismembercardclose" show="{{ismembercard}}" closeable="{{istrue}}" position="bottom">
+    <view class="membercard">
+      <view class="membercardtitle">
+        <view class="titlename">选购黑金卡</view>
+        <view>
+          <ccon name="clear" size="16px" color="#DBDBDB" bind:click="ismembercardclose" />
+        </view>
+      </view>
+      <view class="membercardbottom">
+        <view class="membercardlist">
+          <RadioGroup value="{{radio}}" bind:change="onChange">
+            <view class="cardlistchild" 
+            style="{{radio==item.id?'border:1px solid #C19A55;':'border:1px solid #999999;'}}"
+             data-isid="{{item.id}}" 
+             bindtap="onChangelist" 
+             wx:for="{{ismembercardlist}}"
+             wx:key="index">
+              <Radio name="{{item.id}}" icon-size="15px" checked-color="#C19A55" />
+              <view class="childtleft">
+                <view class="childprice" style="{{radio==item.id?'color:#C19A55':'color:#666666'}}">
+                {{item.price}}元
+                </view>
+                <view class="childname">{{item.name}}</view>
+              </view>
+              <view class="cardmeal">
+                {{item.card_meal}}
+              </view>
+            </view>
+          </RadioGroup>
+        </view>
+        <view class="box">
+        <view class="topurchasecard" bindtap="shoppingcard">立即购买</view>
+        </view>
+        
+      </view>
+    </view>
+
+
+  </van-popup>
+</view>

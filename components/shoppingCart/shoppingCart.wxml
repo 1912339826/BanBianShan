@@ -1,0 +1,29 @@
+<!--components/shoppingCart/shoppingCart.wxml-->
+<view class="shoppingCart">
+  <view class="shoppingCartchild">
+    <view class="shoppingCartchildLeft">
+      <view class="top">
+        <view class="iconshopp" bindtap="shoppingclick">
+          <cscon name="shopping-cart-o" size="26px" info="{{shoppingnum}}" />
+        </view>
+        <view class="txt" wx:if="{{shoppingnum<need}}">
+         已选{{shoppingnum}}件，还需{{need-shoppingnum}}件
+        </view>
+        <view class="txt" wx:else>
+          已选{{shoppingnum}}件，满足要求
+        </view>
+      </view>
+
+      <view class="bottom">
+        <!-- 价格总计 -->
+        <text>总计：</text>
+        <text>¥{{sum}}</text>
+      </view>
+    </view>
+
+    <view class="shoppingCartchildRight">
+      <view class="bottonone" wx:if="{{shoppingnum<need}}">还差{{need - shoppingnum}}件商品</view>
+      <view class="botton" wx:else bindtap="changeType">立即支付</view>
+    </view>
+  </view>
+</view>

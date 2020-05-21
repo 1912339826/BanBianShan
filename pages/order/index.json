@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "topnav": "/components/topnav/topnav",
+    "cardOrder":"/components/order/cardOrder/cardOrder",
+    "van-tabs":"/dist/tabs/index",
+    "van-tab": "/dist/tab/index",
+    "defaultOrder":"/components/order/defaultOrder/defaultOrder"
+  }
+}

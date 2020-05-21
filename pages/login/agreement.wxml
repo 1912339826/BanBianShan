@@ -1,0 +1,4 @@
+<!--pages/login/agreement.wxml-->
+<!-- <view>{{agreement}}</view> -->
+
+<web-view src="{{hostUrl}}/minsu/h5/memberAgreement"></web-view>

@@ -1,0 +1,152 @@
+/**index.wxss**/
+.index_header_pic image{
+  position: absolute;
+  top: 0;
+  height: 750rpx;
+   z-index: -1;
+}
+.index_header_empty{
+  height: 366rpx;
+}
+
+/* search */
+.index_info_search{
+  padding:0  50rpx 40rpx;
+}
+.index_info_search .part_info{
+  height: 130rpx;
+}
+.index_info_search .part_info image{
+  width:16rpx;
+  height: 26rpx;
+}
+.index_info_search .line_one .line_right image{
+  width: 25rpx;
+  height: 29rpx;
+}
+.index_info_search .line_one .line_left{
+  width: 380rpx;
+} 
+.index_info_search .line_one .line_right{
+  padding-left: 70rpx; 
+  width: 193rpx;
+}
+.index_info_search .line_two .line_left{
+  width: 380rpx;
+} 
+.index_info_search .line_two .line_right{
+  padding-left: 45rpx; 
+  width: 193rpx;
+}
+.index_info_search .line_two  .line_wrap {
+  margin: 0 26rpx ;
+  width: 24rpx;
+  height: 40rpx;  
+}
+.index_info_search .line_two  .line_wrap .line{
+  height: 1rpx;
+  background:rgba(230,230,230,1);
+}
+.btn_search{
+    width:570rpx;
+    height:88rpx;
+}
+/* swiper */
+.index_swiper{
+  margin: 40rpx 0 80rpx;
+  position: relative;
+  height: 214rpx;
+}
+.index_swiper image{
+  height: 214rpx;
+}
+.index_swiper_count{
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  background: #000;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%; 
+  opacity: .25;
+  color: #fff;
+}
+
+/* select pic */
+.index_select_info_wrap{
+  flex-flow: row nowrap;
+  overflow-x: scroll;
+}
+.index_select_info {
+  position: relative;
+  padding-right: 18rpx; 
+}
+.index_select_info image{
+  width:300rpx;
+  height:200rpx;
+}
+.index_select_price{
+  position: absolute;
+  left: 0;
+  top: 144rpx;
+  }
+ .index_select_price .info{
+   padding: 3rpx 9rpx;
+   background:rgba(193,23,46,1);
+ }
+.index_select_des{
+  line-height: 40rpx;
+  min-height: 108rpx;
+  padding: 10rpx 20rpx;
+}
+.index_select_des image{
+  width: 36rpx;
+  height: 33rpx;
+}
+
+/* city select */
+.index_city_head image{
+width:14rpx;
+height:26rpx;
+}
+.index_city_info_wrap{
+  flex-flow: row wrap;
+}
+
+.index_city_info:nth-child(3n+2){
+  padding: 0 20rpx;
+}
+
+.index_city_info image{
+ width:210rpx;
+height:144rpx;
+}
+
+
+/*method  */
+
+.index_method_head image{
+  height: 214rpx;
+  overflow: hidden;
+}
+.index_method_info_list image{
+  width: 208rpx;
+  height: 208rpx;
+  overflow: hidden;
+}
+.index_method_head{
+  position: relative;
+}
+.index_method_info{
+   width: 208rpx;
+  position: relative;
+}
+.index_method_name{
+  position: absolute;
+  left: 0;
+  top: 160rpx;
+  }
+ .index_method_name .info{
+   padding: 3rpx 9rpx;
+   background:rgba(193,23,46,1);
+ }

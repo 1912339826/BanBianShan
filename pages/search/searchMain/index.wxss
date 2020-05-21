@@ -1,0 +1,44 @@
+/* pages/search/searchMain/index.wxss */
+page,
+.searchmain_wrap .van-cell--borderless,
+.searchmain_wrap .van-search__content--square{
+  background-color: #fff !important;
+}
+.searchmain_wrap .van-cell__left-icon{
+  color: #c1c1c1;
+}
+
+.searchmain_wrap .search_head{
+  border:1px solid rgba(193,154,85,1);
+  padding: 10rpx 5rpx;
+}
+.searchmain_wrap .van-search{
+  background: #fff;
+  margin:  0;
+  padding: 0;
+}
+.searchmain_wrap .van-search__action {
+color: #333;
+background: #fff;
+font-size: 26rpx;
+}
+.searchmain_wrap .van-field__input::placeholder{
+  color: red;
+}
+.search_history image{
+  width:26rpx;
+   height:28rpx;
+}
+.search_tag_check{
+  flex-flow: row wrap;
+}
+.search_tag_check .tag_check{
+  height:56rpx;
+  background:rgba(246,246,246,1);
+  margin-bottom: 20rpx; 
+  margin-right: 30rpx;
+  padding: 0 30rpx;
+}
+.search_info{
+  padding: 30rpx 0;
+}

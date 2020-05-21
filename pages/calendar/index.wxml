@@ -1,0 +1,10 @@
+<!--pages/order/index.wxml-->
+<view class="order_index">
+   <topnav header="{{title}}"></topnav>
+   <calendar 
+bind:sendObj="getCalendarData" 
+currentYear="{{dateAllInfo.currentYear}}" 
+currentMonth="{{dateAllInfo.currentMonth}}" 
+currentDay="{{dateAllInfo.currentDay}}"
+dateType="{{options.dateType}}"></calendar>
+</view>

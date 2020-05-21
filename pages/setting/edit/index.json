@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-icon": "/dist/icon/index",
+    "van-field": "/dist/field/index",
+    "topnav": "/components/topnav/topnav"
+  }
+}

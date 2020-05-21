@@ -1,0 +1,4 @@
+@import "../../../app.wxss";
+.cardIndex_wrap{
+  padding: 30rpx;
+}

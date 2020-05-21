@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "topnav": "/components/topnav/topnav",
+    "cardOrderdetails":"/components/order/cardOrder/cardOrderdetails/cardOrderdetails",
+    "CountDown":"/dist/count-down/index"
+  }
+}

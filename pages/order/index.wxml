@@ -1,0 +1,44 @@
+<!--pages/order/index.wxml-->
+<view class="order_index">
+  <topnav header="{{title}}" isArrow="{{isfalse}}"></topnav>
+  <view class="statelist">
+    <van-tabs active="{{ active }}" swipe-threshold="{{swipethreshold}}" bind:change="onChange" color="#C19A55" sticky>
+      <van-tab title="全部">
+        <view wx:if='{{total>0}}'>
+          <cardOrder wx:for='{{listarr}}' store_name="{{item.info.store_name}}" status_show="{{item.status_show}}" isname="{{item.info.rooms[0].name}}" begin_time="{{item.info.begin_time}}" roosinfodays="{{item.info.rooms[0].info}}" roosinfonums="{{item.info.rooms[0].info}}" isid="{{item.id}}" money="{{item.moneys}}" srcimg="{{item.info.rooms[0].cover}}" trade_no ="{{item.trade_no}}"  status="{{item.status}}"/>
+        </view>
+        <defaultOrder wx:else/>
+      </van-tab>
+      <van-tab title="等待付款">
+        <view wx:if='{{total>0}}'>
+         <cardOrder wx:for='{{listarr}}' store_name="{{item.info.store_name}}" status_show="{{item.status_show}}" isname="{{item.info.rooms[0].name}}" begin_time="{{item.info.begin_time}}" roosinfodays="{{item.info.rooms[0].info}}" roosinfonums="{{item.info.rooms[0].info}}" isid="{{item.id}}" money="{{item.moneys}}" srcimg="{{item.info.rooms[0].cover}}" trade_no ="{{item.trade_no}}"  status="{{item.status}}"/>
+        </view>
+        <defaultOrder wx:else/>
+      </van-tab>
+      <van-tab title="等待出行">
+        <view wx:if='{{total>0}}'>
+         <cardOrder wx:for='{{listarr}}' store_name="{{item.info.store_name}}" status_show="{{item.status_show}}" isname="{{item.info.rooms[0].name}}" begin_time="{{item.info.begin_time}}" roosinfodays="{{item.info.rooms[0].info}}" roosinfonums="{{item.info.rooms[0].info}}" isid="{{item.id}}" money="{{item.moneys}}" srcimg="{{item.info.rooms[0].cover}}" trade_no ="{{item.trade_no}}"  status="{{item.status}}"/>
+        </view>
+        <defaultOrder wx:else/>
+      </van-tab>
+      <van-tab title="出行中">
+        <view wx:if='{{total>0}}'>
+         <cardOrder wx:for='{{listarr}}' store_name="{{item.info.store_name}}" status_show="{{item.status_show}}" isname="{{item.info.rooms[0].name}}" begin_time="{{item.info.begin_time}}" roosinfodays="{{item.info.rooms[0].info}}" roosinfonums="{{item.info.rooms[0].info}}" isid="{{item.id}}" money="{{item.moneys}}" srcimg="{{item.info.rooms[0].cover}}" trade_no ="{{item.trade_no}}" status="{{item.status}}"/>
+        </view>
+        <defaultOrder wx:else/>
+      </van-tab>
+      <van-tab title="已完成">
+        <view wx:if='{{total>0}}'>
+         <cardOrder wx:for='{{listarr}}' store_name="{{item.info.store_name}}" status_show="{{item.status_show}}" isname="{{item.info.rooms[0].name}}" begin_time="{{item.info.begin_time}}" roosinfodays="{{item.info.rooms[0].info}}" roosinfonums="{{item.info.rooms[0].info}}" isid="{{item.id}}" money="{{item.moneys}}" srcimg="{{item.info.rooms[0].cover}}" trade_no ="{{item.trade_no}}"  status="{{item.status}}"/>
+        </view>
+        <defaultOrder wx:else/>
+      </van-tab>
+      <van-tab title="已超时">
+        <view wx:if='{{total>0}}'>
+         <cardOrder wx:for='{{listarr}}' store_name="{{item.info.store_name}}" status_show="{{item.status_show}}" isname="{{item.info.rooms[0].name}}" begin_time="{{item.info.begin_time}}" roosinfodays="{{item.info.rooms[0].info}}" roosinfonums="{{item.info.rooms[0].info}}" isid="{{item.id}}" money="{{item.moneys}}" srcimg="{{item.info.rooms[0].cover}}" trade_no ="{{item.trade_no}}"  status="{{item.status}}"/>
+        </view>
+        <defaultOrder wx:else/>
+      </van-tab>
+    </van-tabs>
+  </view>
+</view>

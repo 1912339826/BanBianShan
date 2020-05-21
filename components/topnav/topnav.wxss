@@ -1,0 +1,26 @@
+@import "../../app.wxss";
+.redtop_wrap{
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 56rpx 0 20rpx; 
+  display: flex;
+  background: #fff;
+}
+.van-icon-arrow-left{
+   color: #333;
+}
+.navtop_arrow{
+  width: 15%;
+  padding-left: 30rpx;
+  font-size: 40rpx;
+}
+.navtop_mine{
+  width: 70%;
+  text-align: center;
+  font-weight: 700;
+}
+.head_empty{
+  height: 128rpx;
+}

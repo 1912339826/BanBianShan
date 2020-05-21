@@ -1,0 +1,114 @@
+
+
+
+   <view class="hotel_type gray3 fs26 bf">
+  <view class="hotel_type_head">
+   
+   <!-- <view>
+     <view class="hotel_type_head_top bf">
+        <view class="flex-rb flex-ac">
+          <text class="fs32 f5">{{loadModel.name}}</text>
+          <image src="/public/icon@3x/icon_room_particulars_close@3x.png" catchtap="handleClose"></image>
+        </view>
+        <view class="cr">
+          <text class="fs32 f5">押金 ¥{{loadModel.price}} </text>
+          <text>/晚</text>
+        </view>
+    </view>
+</view> -->
+
+    <view class="hotel_type_head_swiper">
+      <swiper autoplay='false' circular='true' bindchange="swiperChange">
+        <swiper-item wx:for="{{loadModel.detail.pics}}" class="flex-rb flex-ac hotel_type_head_item tc" wx:key="index">
+          <image src="{{item.url}}" class="current_swiper"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <view class="hotel_type_info p40 p-t-20 bf">
+    <view class="hotel_type_head_btn flex-rb flex-ac">
+      <btnDate id="filter-date" dateType="{{1}}"></btnDate>
+      <view class="flex btn_right f5">
+        <view class="btn_check flex-cc fs40" catchtap="handleAdd" data-type="1">-</view>
+        <view class="btn_center flex-cc fs28">{{num}} {{loadModel.show_unit}}</view>
+        <view class="btn_check flex-cc fs40" catchtap="handleAdd" data-type="2">+</view>
+      </view>
+    </view>
+    <view>
+
+    <view class="m-t-40">
+      <text class="fs28 f5">客房概况</text>
+      <view class="p-t-20 m-b-40">
+     {{loadModel.detail.des}}
+      </view>
+      <view class="hotel_type_des_wrap flex-rb">
+          <view class="hotel_type_des tc">
+            <image src="/public/icon@3x/icon_room_particulars_people@3x.png"></image>
+            <view>限住{{loadModel.can_in_num}}人</view>
+          </view>
+            <view class="hotel_type_des tc">
+            <image src="/public/icon@3x/icon_room_particulars_bed@3x.png"></image>
+            <view class="flex-cc"> 
+              <text>{{loadModel.bed_num}}张床</text>
+              <view class="flex-ac c5 p-l-5" catchtap="changeText">
+                <text>{{isShowText==true?"收起":"展开"}}</text>
+                <image  src='{{isShowText==true? "/public/icon@3x/icon_arrow_golden_up@3x.png" : "/public/icon@3x/icon_arrow_golden_down@3x.png"}}' class="show_btn_pic"></image>
+              </view>
+            </view>
+          </view>
+           <view class="hotel_type_des tc">
+            <image src="/public/icon@3x/icon_room_particulars_square@3x.png"></image>
+            <view>{{loadModel.detail.area_size}}m²</view>
+          </view>
+      </view>
+
+        <view class='hotel_type_des hotel_type_des_down m-t-20 bf p30' wx:if="{{isShowText && loadModel.bed_num}}">
+             <view class="flex-rb " wx:for="{{loadModel.room_model}}" wx:key="index">
+                <view class="flex-ac hotel_type_des_icon_left">
+                    <image src="/public/icon@3x/icon_room_particulars_bed@3x.png"></image>
+                    <text class="p-l-5">{{item.bed_type}}</text>
+                </view>
+                <view class="hotel_type_des_icon_center">
+                <text>长宽:{{item.sku}}</text>
+                </view>
+                <view>
+                   <text>{{item.num}}张</text>
+                </view>
+             </view>    
+        </view>
+
+        <view class="m-t-40">
+            <text class="fs28 f5">配置设施</text>
+            <view class="flex hotel_icon_list m-t-30">
+                <view class="flex-ac" wx:for="{{matchContains}}" wx:key="index">
+                   <image src="{{item.pic}}" class="p-r-5"></image>
+                    <text class="p-l-5">{{item.name}}</text>
+                </view>
+            </view> 
+        </view>
+
+       <view class="hotel_type_down_txt">
+            <text class="fs28 f5">入住政策</text>
+            <view class="m-t-20">
+              {{loadModel.detail.policy}}
+            </view>
+        </view>
+    </view>
+    </view>
+  </view>
+
+  <view class="hotel_type_down_sub_empty bf">
+
+</view>
+
+
+
+
+
+</view>
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+/* pages/order/ordersuccessresult/index.wxss */
+.ordersuccessresult{
+  height: 100vh;
+  background-color: #fff;
+  font-family: "苹方-简 常规体";
+}
+
+.ordersuccessresultchild{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 99rpx;
+}
+
+.ordersuccessresultchild image{
+  height: 158rpx;
+  width: 158rpx;
+  margin-bottom: 50rpx;
+}
+
+.ordersuccessresultchild .txt{
+  color: #333333;
+  font-size: 32rpx;
+  font-weight: 500;
+  margin-bottom: 20rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+}
+
+.ordersuccessresultchild .hint{
+  height: 37rpx;
+  line-height: 37rpx;
+  color: #333333;
+  font-size: 26rpx;
+}
+
+.ordersuccessresultchild button{
+  margin-top: 102rpx;
+  color: #C19A55;
+  font-size: 32rpx;
+  font-weight: 500;
+  border: 1px solid #C19A55;
+  width: 670rpx;
+  height: 88rpx;
+  border-radius: 0;
+}

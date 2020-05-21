@@ -1,0 +1,55 @@
+/* components/order/reserveRule/reserveRule.wxss */
+.reserveRule{
+  background-color: #fff;
+  padding:40rpx; 
+}
+
+.custom-class{
+  display: flex;
+  justify-content: space-between;
+}
+
+.options{
+  margin-top: 40rpx;
+}
+
+.options .optionsbox{
+  height: 64rpx;
+  width: 288rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.options .yes{
+  display: flex;
+}
+
+.options .yes .optionsbox:nth-child(1){
+  margin-right: 20rpx;
+}
+
+.reserveRule>.txt{
+  margin-top: 40rpx;
+}
+
+.reserveRule>.txt>text{
+  color: #333333;
+  font-size: 26rpx;
+}
+
+.reserveRule>.txt>text:nth-child(1){
+  font-weight: 400;
+}
+  
+.reserveRule>.txt>text:nth-child(2){
+  font-weight: 500;
+}
+
+/* .optionsbox .van-radio>.van-radio__label{
+  color: #C19A55;
+  font-size: 28rpx;
+  font-weight: 500;
+} */
+

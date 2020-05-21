@@ -1,0 +1,7 @@
+page{
+  background-color: #fff !important;
+}
+.strategy_info image{
+  max-width: 670rpx !important;
+  
+}

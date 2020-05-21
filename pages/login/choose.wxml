@@ -1,0 +1,21 @@
+<!--pages/login/choose.wxml-->
+<view class="head">
+   <image src="/public/nav/logo.png" class="logo"></image>
+   <view class="mini_title">半边山下</view>
+</view>
+<view>
+    <view class="login_title">使用手机号登录半边山下</view>
+    <button open-type='getPhoneNumber' bindgetphonenumber="onGetUserPhoneNumber" type='primary' class="wx_login">
+        <view class="wx_sq">微信手机号快捷授权</view>
+    </button>
+</view>
+<view>
+     <view class="mobile" bindtap="goPhoneLogin">
+          <view class="mobile_login">手机号登录/注册</view>
+     </view>
+</view> 
+<view>
+     <view class="no_login" bindtap="goIndex">
+         暂不登录，我先逛逛
+     </view>
+</view>

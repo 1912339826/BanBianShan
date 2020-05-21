@@ -1,0 +1,14 @@
+@import "../../../app.wxss";
+.btn_date_wrap{
+  width: 336rpx;
+  padding: 6rpx 28rpx;
+}
+.btn_date_wrap .line_wrap .line_top{
+  margin: 0 7rpx;
+}
+.btn_date_wrap .line_wrap .line{
+  width:84rpx;
+ height:1rpx;
+background:rgba(255,255,255,1);
+margin-top: 10rpx; 
+}

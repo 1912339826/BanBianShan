@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/pay/payResult/index",
+    "pages/pay/paySuccess/index",
+    "pages/webLink/index",
+    "pages/order/orderDetails/index",
+    "pages/order/ordersuccessresult/index",
+    "pages/order/orderWay/index",
+    "pages/order/orderSubmit/index",
+    "pages/index/strategy/index",
+    "pages/details/index",
+    "pages/login/index",
+    "pages/login/auth",
+    "pages/login/choose",
+    "pages/login/phoneLogin",
+    "pages/login/register",
+    "pages/login/agreement",
+    "pages/login/changePhone",
+    "pages/mine/bind/index",
+    "pages/card/bind",
+    "pages/card/index",
+    "pages/mine/index",
+    "pages/card/VipCardRule",
+    "pages/order/index",
+    "pages/card/buy",
+    "pages/card/buy/success",
+    "pages/card/buy/fail",
+    "pages/setting/edit/index",
+    "pages/setting/index",
+    "pages/search/index",
+    "pages/pay/index",
+    "pages/map/index",
+    "pages/search/searchMain/index",
+    "pages/search/tag/index",
+    "pages/search/city/index",
+    "pages/calendar/index"    
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/public/tab/icon_tab_home_nor@3x.png",
+        "selectedIconPath": "/public/tab/icon_tab_home copy@3x.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/order/index",
+        "iconPath": "/public/tab/icon_tab_order_nor@3x.png",
+        "selectedIconPath": "/public/tab/icon_tab_order copy@3x.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "iconPath": "/public/tab/icon_tab_me_nor@3x.png",
+        "selectedIconPath": "/public/tab/icon_tab_me copy@3x.png",
+        "text": "我的"
+      }
+    ],
+    "color": "#999999",
+    "selectedColor": "#333333"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

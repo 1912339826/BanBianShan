@@ -1,0 +1,21 @@
+<view class="common_btn_wrap fs26 bf">
+    <view class="flex-rb flex-ac common_btn_info">
+        <view>
+          <view class="cr">
+        <text  wx-if="{{mychnageType==0}}">押金:</text>
+        <text  wx-if="{{mychnageType==1}}">总计:</text>
+        <text class="fs32"> ¥{{sum}} </text>
+        <text wx-if="{{mychnageType==0}}">起</text>
+        </view>
+        <view class="grayc1 fs20"  wx-if="{{mychnageType==1}}">
+          <text style="text-decoration:line-through;">¥{{sum}}</text>
+        </view>
+        </view>
+          <view class="cf common_btn_right flex-cc" catchtap="btnClick">
+          <text wx-if="{{mychnageType==0}}">查看房型</text>
+           <text wx-if="{{mychnageType==1}}">立即支付</text>
+        </view>
+    </view>
+</view>
+<view class="common_btn_empty">
+</view>

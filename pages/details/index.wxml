@@ -1,0 +1,198 @@
+<!-- 民宿详情 -->
+<view class='details gray6 fs26'>
+  <topnav header="{{title}}"></topnav>
+  <swiper autoplay='true' circular='true' change='' bindchange="swiperChange" current="{{swiperIndex}}">
+    <swiper-item wx:for="{{loadStore.pics}}" wx:key="index" >
+      <image src="{{item.url}}" class="swiperimgs"></image>
+      <view></view>
+    </swiper-item>
+  </swiper>
+
+  <view class="scrollxbox">
+    <view class="scrollx">
+      <view wx:for="{{loadStore.pics}}" 
+      wx:key="index" 
+      class='normal {{swiperIndex==index?"active": ""}}'
+      catchtap="handleSwiper"
+      data-index="{{index}}">
+        <image src="{{item.url}}"></image>
+      </view>
+      <!-- /* 填充物 */ -->
+      <view class="filler">0</view>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="contentname">{{loadStore.name}}</view>
+    <view class="site flex-ac">
+      <image src="/public/icon@3x/icon_location_grey_small@3x.png" class="icon"></image>
+      <view class="texts">{{loadStore.province_name + loadStore.city_name + loadStore.address}}</view>
+    </view>
+
+    <view class="tag_List flex fs20 m-t-20">
+      <view wx:for="{{loadStore.tag}}" 
+      wx:for-item="tags" 
+      class='tag_item {{tags.is_red== 1? "tag_active": ""}}'>{{tags.name}}</view>
+    </view>
+  </view>
+
+
+  <view class="grayc1 detail_tab_wrap flex-rb flex-ac fs26">
+    <van-tabs active="{{ activeIndex }}" bind:change="tabChange" border="{{false}}">
+      <van-tab title="概况" class="fs32"></van-tab>
+      <van-tab title="房型" class="fs32"></van-tab>
+    </van-tabs>
+    <view class="flex-ac c5 detail_tab_right">
+      <view class="flex-ac p-r-30" catchtap="handleTab" data-current="1">
+        <image src="/public/icon@3x/icon_hotel_recommend_gps@3x.png"></image>
+        <text>一键导航</text>
+      </view>
+       <!-- <button class="index_icon1" open-type="contact" session-from="weapp"> -->
+      <view class="flex-ac" catchtap="linkUs">
+        <image src="/public/icon@3x/icon_hotel_recommend_phone@3x.png"></image>
+        <text>联系我们</text>
+      </view>
+      <!-- </button> -->
+    </view>
+  </view>
+
+
+
+  <view class="detail_tab_info p40 fs26 gray3 m-t-30">
+    <view class="detail_tab_info_one" wx:if="{{activeIndex==1}}">
+      <btnDate id="filter-date" clearId="{{1}}"></btnDate>
+      <!-- 房型列表 -->
+      <view class="detail_tab_hotel">
+        <hotelDetail 
+        wx:for="{{listRoom}}" 
+        wx:key="index" 
+        catchtap="handlePopup" 
+        listItem="{{item}}" 
+        data-id="{{item.id}}"></hotelDetail>
+      </view>
+    </view>
+    <view class="detail_tab_info_zero" wx:if="{{activeIndex==0}}">
+      <view class="detail_method_info">
+        <view class="flex-rb m-b-20">
+          <text class="fs28 f5">游玩攻略</text>
+          <view class="flex-ac c5" catchtap="changeText">
+            <text>{{isShowText==true?"收起":"展开"}}</text>
+            <image src='{{isShowText==true? "/public/icon@3x/icon_arrow_golden_up@3x.png" : "/public/icon@3x/icon_arrow_golden_down@3x.png"}}'></image>
+          </view>
+        </view>
+        <view class="detail_method_info_wrap">
+          <view class='{{isShowText==true ? "":"three-line"}}'>
+            {{loadStore.des}}
+          </view>
+          <view class='{{isShowText==true ? "":"detail_method_info_cover"}}'>
+
+          </view>
+        </view>
+      </view>
+
+      <view class="m-t-40 m-b-40 detail_method_info_down">
+        <text class="fs28 f5">入住及黑金卡政策</text>
+        <view class="m-t-20 m-b-20" wx:if="{{isVip==2}}" catchtap="handleCard">
+          <image src="/public/nav/center_index.png" class="w100"></image>
+        </view>
+        <view>
+        <import src="../../wxParse/wxParse.wxml" />
+     <template is="wxParse" data="{{wxParseData: article.nodes}}" />
+          <!-- <text>{{cardRule.card_policy}}</text> -->
+          <!-- <text class="f7">届时，预订平台将扣除3%的保证金作为手续费。72小时内不予取消，预付的保证金不予退还。</text>
+          <text>如会员选择购买商品，</text>
+          <text class="f7">若无质量问题，会员同意不适用七天无理由退货规则。如会员执意退货，将按保证金退订的计算方式扣除手续费。</text> -->
+        </view>
+      </view>
+
+      
+    </view>
+  </view>
+</view>
+
+<!-- 房型弹出模块 -->
+<view>
+</view>
+
+<view class="hotel_type_wrap">
+  <van-popup show="{{ isShowType }}" position="bottom" custom-style="height: 100%;" bind:close="typeClose">
+    
+    <scroll-view scroll-y="true" bindscroll="handleScroll" style="height: 100%" upper-threshold="{{100}}">
+    <view class="hotel_type_empty" catchtap="typeClose">
+
+    </view>
+      <view>
+     <view class="hotel_type_head_top bf {{isTop==true ? 'fixed': ''}}">
+        <view class="flex-rb flex-ac">
+          <text class="fs32 f5">{{loadModel.name}}</text>
+          <image src="/public/icon@3x/icon_room_particulars_close@3x.png" catchtap="typeClose"></image>
+        </view>
+        <view class="cr">
+          <text class="fs32 f5">押金 ¥{{loadModel.price}} </text>
+          <text>/晚</text>
+        </view>
+    </view>
+    <view class="hotel_type_head_empty" wx:if="{{isTop}}">
+    
+    </view>
+</view>
+        <hotelType 
+        loadModel="{{loadModel}}" 
+        roomCount="{{roomCount}}"
+        bind:typeInfo="typeInfo" 
+        id="filter-date-up" ></hotelType>
+    </scroll-view>
+
+
+  </van-popup>
+   <view class="btn_sub_wrap bf" wx:if="{{isShowType}}">
+        <view class="bf p40 p-t-20 p-b-20 ">
+          <view class='{{roomCount>0 ? "" :"op4"}}'>
+
+            <view class="btn-sub cf flex-cc fs32" catchtap="handleOrder">
+            
+              <text>{{roomCount>0 ? "立即预定" : "库存不足"}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+</view>
+
+<!-- 底部按钮 -->
+<view class="detail_tab_btn" wx:if="{{activeIndex==0}}">
+  <commonbtn chnageType="{{0}}" 
+  bindchangeType="changeType" 
+  mychnageType="{{0}}"></commonbtn>
+</view>
+<!-- click hotel -->
+<view class="detail_action">
+  <van-action-sheet title="{{loadStore.contact_phone}}" show="{{ actionShow }}" actions="{{ actions }}" cancel-text="取消" bind:cancel="clickCancel" bind:click-overlay="clickCancel" />
+</view>
+
+
+    
+<!-- 弹窗 -->
+<van-dialog
+  use-slot
+  title="温馨提示"
+  show="{{ isShowDialog && isVip==2}}"
+  showConfirmButton= "{{false}}"
+  zIndex="{{99999999999}}"
+>
+<view class="detail_dialog_info gray3 p40">
+  <view class="fs28 m-t-30 m-b-30">
+  您还不是黑金卡用户，不能享受免费入住，可通过支付房费入住
+  </view>
+  <view class="flex-rb flex-ac fs32 f5 dialog_btns">
+    <view class="flex-cc" catchtap="handleLeft">
+    会员免费
+    </view>
+<view class="c5 flex-cc" catchtap="handleOrderDetail">
+    继续预订
+    </view>
+  </view>
+</view>
+</van-dialog>
+<!-- 底部tab -->
+
+      

@@ -1,0 +1,3 @@
+/* components/defaultOrder/defaultOrder.wxss */
+/* 缺省 */
+@import "../../../app.wxss";

@@ -1,0 +1,27 @@
+<topnav header="{{title}}"></topnav>
+<view class="city_select_wrap gray3">
+
+<view class="city_head" catchtap="handleAll">
+  <text class="fs32 f5">全部城市</text>
+  <view class="city_all_index">
+  <text class="fs28 grayc1">全部</text>
+  </view>
+</view>
+  <van-index-bar index-list="{{ indexList }}">
+  
+
+ <view wx:for="{{ cityList }}" wx:key="index" wx:for-item="cityItem">
+ <van-index-anchor index="{{cityItem.name}}" ></van-index-anchor>
+  <view class="flex-ac fs28 city_info" 
+  wx:for="{{cityItem.children}}"
+  wx:for-index="indexC"
+  catchtap="handleCity"
+  data-info="{{item}}"
+  data-index="{{index}}"
+  wx:key="indexC">
+    <text class='{{item.checked ? "c5":""}}'>{{item.city}}</text>
+  </view>
+ </view>
+</van-index-bar>
+
+</view>

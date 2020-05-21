@@ -1,0 +1,12 @@
+<view class="content">
+   <image src="/public/icon@2x/icon_pay_success.png" class="suc_icon"/>
+   <view class="suc_text">
+      购买成功
+   </view>
+   <view class="suc_desc">
+      黑金卡尊享红版已放入您的账户
+   </view>
+   <view class="check_view" bindtap="toMine">
+      查看详情
+   </view>
+</view>

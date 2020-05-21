@@ -1,0 +1,37 @@
+@import "../../app.wxss";
+.tag_check_list_wrap{
+  flex-flow: row wrap;
+}
+.tag_check_list_wrap .tag_check{
+  width: 200rpx;
+  height:56rpx;
+  background:rgba(246,246,246,1);
+  margin-bottom: 30rpx; 
+  border:2px solid transparent;
+  position: relative;
+}
+.tag_check_list_wrap .tag_check image{
+width:20rpx;
+height:20rpx;
+position: absolute;
+bottom: 0;
+right: 0;
+ display: none;
+}
+.tag_check_list_wrap .tag_check:nth-child(3n+2){
+  margin: 0 35rpx 30rpx;
+}
+.tag_check_list_wrap .active{
+  border:2px solid rgba(193,154,85,1);
+}
+.tag_check_list_wrap .active image{
+  display: block;
+}
+
+.search_tag_btn_wrap .btn-sub{
+ width: 320rpx;
+ border: 1rpx solid #C19A55;
+}
+.search_tag_btn_wrap .btn-sub:nth-child(2){
+  border: 1rpx solid transparent;
+}

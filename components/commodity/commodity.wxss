@@ -1,0 +1,70 @@
+/* components/commodity/commodity.wxss */
+.commodity{
+  width: 100vw;
+  font-family: "苹方-简 常规体";
+}
+
+.commodity .list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 750rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  margin-top: 40rpx;
+ 
+}
+
+.commodity .listchild{
+  margin-bottom: 40rpx;
+  width: 314rpx;
+  background-color: #fff;
+  height: 382rpx;
+}
+
+.commodity .listchild:nth-child(odd){
+  margin-right: 40rpx;
+}
+
+.commodity .listchildtop{
+  position: relative;
+}
+
+.commodity .tag{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #C1172E;
+  color: #FFFFFF;
+  font-size: 28rpx;
+  font-weight: 400;
+  height: 54rpx;
+  line-height: 54rpx;
+  padding-left: 19rpx;
+  padding-right: 19rpx;
+}
+
+.commodity .listchildbottom{
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.commodity .listchildbottom .title{
+  width: 274rpx;
+  color: #333333;
+  font-size: 26rpx;
+  font-weight: 400;
+  height: 74rpx;
+}
+
+.commodity .listchildbottom .moneyandclick{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 10rpx;
+}
+
+.commodity .listchildbottom .moneyandclick .txt{
+  color: #C1172E;
+  font-size: 26rpx;
+  font-weight: 500;
+}

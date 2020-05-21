@@ -1,0 +1,425 @@
+/* pages/orderSubmit/index.wxss */
+
+.orderSubmit {
+  width: 100%;
+  font-family: "苹方-简 中黑体";
+}
+
+.orderSubmit .membercard {
+  background-color: #fff;
+}
+
+.orderSubmit .membercard .membercardtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.050);
+  height: 114rpx;
+}
+
+.orderSubmit .membercard .membercardbottom {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  padding-bottom: 20rpx;
+  padding-top: 40rpx;
+}
+
+.orderSubmit .membercard .membercardbottom .membercardlist {
+  height: 656rpx;
+  overflow: scroll;
+}
+
+.orderSubmit .membercard .membercardbottom .membercardlist .cardlistchild {
+  display: flex;
+  padding: 34rpx 20rpx;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.orderSubmit .membercard .membercardbottom .membercardlist .cardlistchild .childtleft {
+  margin-left: 32rpx;
+}
+
+.orderSubmit .membercard .membercardbottom .membercardlist .cardlistchild .childprice {
+  font-size: 38rpx;
+  font-weight: 400;
+  margin-bottom: 6rpx;
+  width: 168rpx;
+}
+
+.orderSubmit .membercard .membercardbottom .membercardlist .cardlistchild .cardmeal {
+  width: 372rpx;
+  color: #c1c1c1;
+  font-size: 20rpx;
+  margin-left: 28rpx;
+}
+
+.orderSubmit .membercard .box{
+  height: 128rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orderSubmit .membercard .topurchasecard{
+  width: 670rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-image: linear-gradient(#D0AE72,#C69B51);
+  color: #FFFFFF;
+  font-size: 32rpx;
+  font-weight: 500;
+  text-align: center;
+}
+
+.orderSubmit .HYT {
+  height: 0.5px;
+  margin-top: 182rpx;
+}
+
+.orderSubmit .carttop {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88rpx;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.05);
+}
+
+.orderSubmit .carttop>view:nth-child(1) {
+  color: #333;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.orderSubmit .cart {
+  padding-bottom: 40rpx;
+}
+
+.orderSubmit .cartlist {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  padding-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderSubmit .cartlist>view:nth-child(1) {
+  width: 254rpx;
+  color: #333;
+  font-size: 26rpx;
+  font-weight: 400;
+  height: 37rpx;
+  line-height: 37rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.orderSubmit .cartlist>view:nth-child(2),
+.orderSubmit .cartlist>view:nth-child(3) {
+  color: #c1c1c1;
+  font-size: 26rpx;
+  font-weight: 400;
+}
+
+.orderSubmit .cartlist>view:nth-child(4) {
+  color: #c19a55;
+  font-size: 26rpx;
+  font-weight: 400;
+}
+
+.orderSubmit .site {
+  background-color: #fff;
+  height: 146rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+
+.orderSubmit .site .sitechild {
+  display: flex;
+  align-items: center;
+}
+
+.orderSubmit .site .sitechild .nameandsite {
+  margin-left: 10rpx;
+}
+
+.orderSubmit .site .sitechild .nameandsite .name {
+  color: #333;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.orderSubmit .site .sitechild .nameandsite .issite {
+  color: #c1c1c1;
+  font-size: 20rpx;
+  font-weight: 400;
+}
+
+.orderSubmit .promptmessage {
+  background-color: #fff;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  font-weight: 400;
+  font-size: 26rpx;
+  padding-bottom: 40rpx;
+}
+
+.orderSubmit .promptmessage>text:nth-child(1) {
+  color: #c1c1c1;
+}
+
+.orderSubmit .promptmessage>text:nth-child(2) {
+  color: #333;
+}
+
+.orderSubmit>.ordername {
+  height: 214rpx;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding-left: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.orderSubmit>.ordername>image {
+  width: 200rpx;
+  height: 134rpx;
+  margin-right: 30rpx;
+}
+
+.orderSubmit>.ordername>.content>.name {
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #333;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.orderSubmit>.ordername>.content>.nameC {
+  color: #c1c1c1;
+  font-size: 26rpx;
+  font-weight: 400;
+  margin-top: 8rpx;
+  margin-bottom: 9rpx;
+}
+
+.orderSubmit>.ordername>.content>.money {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  height: 40rpx;
+}
+
+.orderSubmit>.ordername>.content>.money>view:nth-child(1) {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #c73246;
+}
+
+.orderSubmit>.ordername>.content>.money>view:nth-child(2) {
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 22rpx;
+  color: #c1172e;
+}
+
+/* 订单的总时间、间数 */
+
+.orderSubmit>.ordertime {
+  width: 100%;
+  height: 114rpx;
+  padding: 0 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.orderSubmit>.ordertime>.time {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 500;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.orderSubmit>.ordertime>.number {
+  color: #c1c1c1;
+  font-size: 26rpx;
+  font-weight: 400;
+  height: 37rpx;
+  line-height: 37rpx;
+}
+
+/* 房费订房规则下面的 */
+
+.orderSubmit>.ordertent {
+  color: #333;
+  font-weight: 400;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40rpx;
+  padding-top: 0;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+/* 表单 */
+
+.orderSubmit .forms {
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+
+.orderSubmit .forms>.inputbox {
+  height: 117rpx;
+  display: flex;
+  align-items: center;
+}
+
+.orderSubmit .forms>.inputbox:nth-child(2) {
+  border-top: 1rpx solid hsla(0, 0%, 0%, 0.05);
+  border-bottom: 1rpx solid hsla(0, 0%, 0%, 0.05);
+}
+
+/* 折扣方案 */
+
+.orderSubmit .discount {
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 20rpx;
+  height: 114rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40rpx;
+}
+
+.orderSubmit .discount>.key {
+  color: #333;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.orderSubmit .discount image {
+  width: 7rpx;
+  height: 13rpx;
+}
+
+.orderSubmit .discount>.valueandimg {
+  display: flex;
+  align-items: center;
+}
+
+.orderSubmit .discount>.valueandimg>.value {
+  color: #333;
+  font-size: 26rpx;
+  font-weight: 400;
+  margin-right: 13rpx;
+}
+
+/* 选择器样式 */
+
+.orderSubmit .customclass {
+  z-index: 500;
+}
+
+.orderSubmit .customclass .toolbar {
+  font-size: 30rpx;
+  font-weight: 400;
+}
+
+.orderSubmit .customclass .toolbar .van-picker__cancel {
+  color: #999;
+}
+
+.orderSubmit .customclass .toolbar .van-picker__confirm {
+  color: #3cb95b;
+}
+
+.orderSubmit .customclass .yesac {
+  color: #333;
+  font-weight: 400;
+  font-size: 42rpx;
+}
+
+.orderSubmit .customclass .noac {
+  color: #333;
+  font-size: 36rpx;
+  font-weight: 400;
+}
+
+/* 黑金 */
+
+.orderSubmit .club {
+  width: 100%;
+  background-color: #fff;
+  height: 306rpx;
+  padding: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.orderSubmit .club>.clubtitle {
+  color: #333;
+  font-size: 28rpx;
+  font-weight: 500;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.orderSubmit .club>.txt {
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  height: 74rpx;
+  font-size: 26rpx;
+  color: #333;
+  font-weight: 400;
+}
+
+.orderSubmit .club>.buttons {
+  display: flex;
+  align-items: center;
+  height: 52rpx;
+}
+
+.orderSubmit .club>.buttons>view {
+  width: 182rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  text-align: center;
+}
+
+.orderSubmit .club>.buttons>view:nth-child(1) {
+  background-image: linear-gradient(#d0ae72, #c69b51);
+  color: #fff;
+  font-size: 26rpx;
+  font-weight: 400;
+  margin-right: 30rpx;
+}
+
+.orderSubmit .club>.buttons>view:nth-child(2) {
+  border: 1rpx solid #c19a55;
+  color: #c19a55;
+  font-size: 26rpx;
+  font-weight: 400;
+}
+.orderSubmit .van-cell__title{
+  font-weight: 500;
+}

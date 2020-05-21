@@ -1,0 +1,184 @@
+<view class="index_wrap">
+  <view class="index_header_pic">
+  <!-- todo -->
+    <image src="{{ homeData.top.url || '/public/nav/index_head.png'}}" class="w100" mode='widthFix'></image>
+  </view>
+  <view class="index_header_empty">
+  
+  </view>
+  <view class="index_info_wrap p40 gray3 fs26">
+    <!-- search part -->
+    <view class="index_info_search bf gray3 fs26">
+      <view class="flex b-b-1 part_info line_one">
+        <view class="flex-rb flex-ac line_left" catchtap="handleTab" data-index="1">
+          <text class="f7 fs36 single-line">{{cityData.city_name || "全部城市"}}</text>
+          <image src="/public/icon@3x/icon_arrow_grey_big@3x.png"></image>
+        </view>
+        <view class="flex-rb flex-ac line_right" catchtap="getCity">
+          <image src="/public/icon@3x/icon_location_black_big@3x.png"></image>
+          <text>{{currentCity || "南京"}}</text>
+        </view>
+      </view>
+
+      <view class="flex b-b-1 part_info line_two" catchtap="handleTab" data-index="2">
+        <view class="flex-ac line_left" >
+          <view class="tc">
+            <view class="fs28 f7">{{dateCheck.startMon}}月{{dateCheck.startDay}}日</view>
+            <text class="fs20 grayc1">周{{dateCheck.startWeekDay}}入住</text>
+          </view>
+          <view class="line_wrap">
+            <view class="line"></view>
+          </view>
+          <view class="tc">
+            <view class="fs28 f7">{{dateCheck.endMon}}月{{dateCheck.endDay}}日</view>
+            <text class="fs20 grayc1">周{{dateCheck.endWeekDay}}离店</text>
+          </view>
+        </view>
+        <view class="flex-rb flex-ac line_right">
+          <text>共{{dateInfo.length-1}}晚</text>
+          <image src="/public/icon@3x/icon_arrow_grey_big@3x.png"></image>
+        </view>
+      </view>
+
+      <view class="flex b-b-1 part_info line_three flex-ac" catchtap="handleTab" data-index="3">
+        <text class="grayc1">输入民宿名称搜索</text>
+      </view>
+
+      <view class="flex part_info line_four flex-rb flex-ac" catchtap="handleTab" data-index="4">
+        <text class="grayc1 single-line">{{tagName || "按标签筛选"}}</text>
+        <image src="/public/icon@3x/icon_arrow_grey_big@3x.png"></image>
+      </view>
+      <view class="flex-cc btn_search btn-info fs32 f5" catchtap="handleTab" data-index="5">
+        <text>搜索民宿</text>
+      </view>
+    </view>
+    <!--carousel part -->
+    <view class="index_swiper">
+      <swiper 
+      autoplay="{{swiperOptions.autoplay}}" 
+      interval="{{swiperOptions.interval}}" 
+      duration="{{swiperOptions.duration}}" 
+      skip-hidden-item-layout="true"
+      bindchange="swiperChange">
+        <block wx:for="{{homeData.recommends}}" wx:key="index">
+          <swiper-item>
+            <!-- <web-view class="swiper-item" src="{{item.link}}"> -->
+            <view  class="swiper-item" data-info="{{item}}" catchtap="handleLinkTab">
+              <image src="{{item.pic.url}}" class="w100"></image>
+            </view>
+            <!-- </web-view> -->
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="index_swiper_count flex-cc" wx:if="{{homeData.recommends.length}}">
+        {{swiperIndex || '1'}}/{{homeData.recommends.length || '0'}}
+      </view>
+    </view>
+
+
+    <!-- select -->
+    <view class="index_select_wrap">
+      <view class="fs36 f5 m-b-30">精选推荐</view>
+      <view class="index_select_info_wrap flex">
+        <view 
+        class="index_select_info" 
+        wx:for="{{homeData.minsu_recommends}}" 
+        wx:key="index"
+        data-info="{{item}}"
+        catchtap="handleDetail">
+          <image src="{{item.cover || '/public/banner/01.png'}}"></image>
+          <view class="index_select_price cf">
+            <text class="info fs20">押金 ￥{{item.low_price}} 起</text>
+          </view>
+          <view class="index_select_des ">
+            <text class="fs28 f5">{{item.name}}</text>
+            <view class="grayc1 fs20 flex-ac ">
+              <text class="p-r-24">{{item.city_name}}</text>
+              <view class="flex-cc">
+            <image src="/public/icon@3x/icon_location_grey_small@3x.png"></image>
+                <text> {{item.distance_info}}
+                    </text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+        <!-- city -->
+    <view class="index_city_wrap m-t-40">
+      <view class="fs36 f5 m-b-30 index_city_head flex-ac flex-rb">
+        <text>按城市查看</text>
+        <view class="flex-ac fs26 c5"  catchtap="handleTab" data-index="1" >
+          <text class="p-r-10">全部{{homeData.city_data.total_count}}座城市</text>
+          <image src="/public/icon@3x/icon_arrow_golden_small@3x.png"></image>
+        </view>
+      </view>
+
+      <view class="index_city_info_wrap flex">
+        <view class="index_city_info m-b-30"
+         wx:for="{{homeData.city_data.home_list}}" 
+         wx:key="index"
+         catchtap="handleCityTab"
+         data-info="{{item}}">
+          <image src="{{item.pic.url}}"></image>
+        </view>
+      </view>
+    </view>
+
+<!-- method -->
+<!-- todo -->
+  <view class="index_method_wrap m-t-40">
+    <view class="fs36 f5 m-b-30">
+        <text>游玩攻略</text>
+      </view>
+      <view class="index_method_head bf"  
+      catchtap="handleTitleTab" 
+        data-info="{{homeData.article_recommends[0]}}">
+      <image src="{{homeData.article_recommends[0].cover}}" class="w100"></image>
+      <view class="index_method_name cf">
+            <text class="info fs20">{{homeData.article_recommends[0].tags[0]}}</text>
+          </view>
+        <view class="p20 fs28 f5 single-line index_method_head_des">
+        <text>{{homeData.article_recommends[0].title}}</text>
+        </view>
+      </view>
+       <view class="index_method_info_list m-t-20 flex-rb">
+        <view class="index_method_info" 
+        wx:for="{{homeData.article_recommends}}" 
+        wx:key="index" 
+        catchtap="handleTitleTab" 
+        data-info="{{item}}">
+            <image src="{{item.cover}}"></image>
+          <view class="index_method_name cf">
+            <text class="info fs20" >{{item.tags[0]}}</text>
+          </view>
+          <view class="index_select_des bf">
+            <text class="two-line">{{item.title}}</text>
+            </view>
+        </view>
+      </view>
+  </view>
+
+  <view class="index_hotel_wrap m-t-30">
+   <view class="fs36 f5 m-t-40 m-b-10">
+        <text>新品民宿</text>
+      </view>
+         <view class="m-b-30">
+         <text class="grayc1">本月上新{{homeData.recent_store.total}}家民宿</text>
+      </view>
+
+      <view class="index_hotel_list">
+        <view class="index_zoo" wx:for="{{homeData.recent_store.data}}" wx:key="index">
+          <zooid listItem="{{item}}"></zooid>
+        </view>
+      </view>
+    <view>
+    </view>
+  </view>
+
+
+
+
+  </view>
+</view>

@@ -1,0 +1,31 @@
+/* pages/site/index.wxss */
+.site{
+  width: 100%;
+  font-family: "苹方-简 中黑体"
+}
+
+.site .from{
+  margin-top: 30rpx;
+}
+
+.site .yes{
+  width: 100%;
+  background-color: #fff;
+  height: 128rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.site .yes .button{
+  width: 670rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background-image: linear-gradient(#D0AE72,#C69B51);
+  color: #FFFFFF;
+  font-size: 32rpx;
+  font-weight: 500;
+}

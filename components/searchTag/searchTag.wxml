@@ -1,0 +1,62 @@
+
+
+<view class="tag_wrap gray3 fs26 p40 ">
+
+    <view class="m-t-40" wx:for="{{tagList}}" 
+    wx:for-item="typeItem"
+    wx:for-index="typeIndex"
+    wx:key="typeIndex" >
+   <view class="m-b-30">
+    <text class="tag_head fs28 f5" >{{typeItem.tag_class}}</text>
+   </view>
+
+   <view class="tag_check_list_wrap flex">
+      <view 
+      class='{{item.checked==true ? "active": ""}} flex-cc tag_check'    
+      wx:for="{{typeItem.tag}}" 
+      wx:key="index"
+      catchtap="handleChange"
+      data-type="{{typeIndex}}" 
+      data-index="{{index}}">
+        <text>{{item.name}}</text>
+        <view>
+          <image src="/public/icon@3x/icon_tag_search_delete@3x.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view>
+   <view class="m-b-20">
+    <text class="tag_head fs28 f5">民宿类型说明</text>
+   </view>
+   <view>
+      <view class="fs20">
+        <view>
+         1.持卡可以用免费权益抵扣，或者选择打折（免费权益用完后只能打折）； 
+        </view>
+        2.半边折享：持卡可以打折 
+           <view>
+        </view>
+3.半边墅家：持卡可以免费权益抵扣，如别墅有5间客房，扣除5次免费权益（不区分周末非周末次数），2019年8月5日前预订的仍按老规则刷卡入住。
+           <view>
+        </view>
+     
+      </view>
+   </view>
+
+  </view>
+</view>
+
+  <view class="btn_sub_wrap bf search_tag_btn_wrap" >
+  <view class="bf p40 p-t-20 p-b-20 ">
+     <view class="flex-rb">
+     <view class="btn-sub bf c5 flex-cc fs32" catchtap="handleReset"> 
+       <text>重置</text>
+     </view>
+       <view class="btn-sub cf flex-cc fs32" catchtap="handleSave">
+        <text>保存</text>
+      </view>
+     </view>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/order/ordersuccessresult/index.wxml-->
+<!-- 结果详情成功 -->
+<view class="ordersuccessresult">
+  <topnav header="{{title}}" />
+
+  <view class="ordersuccessresultchild">
+    <image src="/public/icon@3x/icon_pay_success@3x.png" />
+    <view class="txt">
+       预订成功
+    </view>
+
+    <view class="hint">已成功为您预订特色木屋房</view>
+    <button bindtap="look">查看详情</button>
+  </view>
+</view>

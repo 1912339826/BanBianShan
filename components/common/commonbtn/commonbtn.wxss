@@ -1,0 +1,18 @@
+@import "../../../app.wxss";
+.common_btn_wrap{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 90;
+}
+.common_btn_info{
+ padding: 20rpx 40rpx;
+}
+.common_btn_right{
+  width:311rpx;
+height:88rpx;
+background:linear-gradient(180deg,rgba(208,174,114,1) 0%,rgba(198,155,81,1) 100%);
+}
+.common_btn_empty{
+  height: 128rpx;
+}

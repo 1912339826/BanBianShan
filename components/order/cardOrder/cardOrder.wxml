@@ -1,0 +1,35 @@
+<!--components/cardOrder/cardOrder.wxml-->
+<!-- 订单列表中的订单卡 -->
+<view class="cardOrder">
+  <view class="nameandstate">
+    <view class="nameandimg">
+      <image src="/public/icon@3x/icon_card_tab_hone@3x.png" class="iconcardtabhone"></image>
+      <view class="name">{{store_name}}</view>
+      <image src="/public/icon@3x/icon_arrow_black_small@3x.png" class="iconarrowblacksmall"></image>
+    </view>
+    <view class="stategray" wx:if="{{status==4||status==5}}">
+      {{status_show}}
+    </view>
+    <view class="statered" wx:else>
+      {{status_show}}
+    </view>
+  </view>
+
+  <view class="message" catchtap="goPay">
+    <image src="{{srcimg}}" class="messageimg"></image>
+    <view class="messagecontent">
+      <view class="name">{{isname}}</view>
+      <view>{{begin_time}} 共{{roosinfodays}}</view>
+      <view>x {{roosinfonums}}</view>
+    </view>
+  </view>
+
+  <view class="cashandaction">
+    <view class="cash">
+      <view class="txt">押金合计：</view>
+      <view class="number">￥{{money}}</view>
+    </view>
+
+    <view class="button" catchtap="goPay" wx:if="{{status==1}}">立即支付</view>
+  </view>
+</view>

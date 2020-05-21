@@ -1,0 +1,10 @@
+<view class="cardIndex_wrap m-t-20 gray3 fs26 bf">
+  <view class="flex-rb flex-ac fs20">   
+    <text>订单号：{{order_number}}</text>
+    <text>{{create_time}}</text>
+  </view>
+  <view class="flex-rb flex-ac p-t-30">
+    <text class="f5 fs28">{{card_name}}</text>
+    <text class="cr">{{use_show}}</text>
+  </view>
+</view>

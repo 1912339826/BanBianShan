@@ -1,0 +1,22 @@
+<view class="hotel_Detail gray3 fs26">
+  <view class="pic_self">
+    <image class="w100" src="{{listItem.cover}}"></image>
+  </view>
+  <view class="hotel_detail_des">
+  </view>
+  <view class="hotel_detail_info fs28 flex-rb flex-ac">
+    <view class="info_left f5">
+        <view>
+          <text>{{listItem.name}}</text>
+        </view>
+         <view class="cr">
+          <text>押金</text>
+          <text> ¥{{price}} </text>
+          <text>起</text>
+        </view>
+    </view>
+    <view class="info_right cf flex-cc" catchtap="handleTab">
+    <text>{{listItem.reserve == 1 ? "立即预约":"查看哪天有房"}}</text>
+    </view>
+  </view>
+</view>

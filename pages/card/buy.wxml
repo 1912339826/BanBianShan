@@ -1,0 +1,39 @@
+<!-- <web-view src="{{url}}/minsu/h5/VipCardBind"></web-view> -->
+<view class="footer">
+   <view class="index_icon" bindtap="toIndex">
+      <image src="/public/icon@3x/icon_card_tab_hone@3x.png" class="index"></image>
+      <view class="font">回到首页</view> 
+   </view>
+   <button class="index_icon1" open-type="contact" session-from="weapp">
+        <image src="/public/icon@3x/icon_card_tab_connect@3x.png" class="index"></image>
+        <view class="font">联系我们</view> 
+    </button>
+    <view class='buy' bindtap="showModal">
+       立即购买
+    </view>
+</view>
+
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view class="buy_top">  
+       <view class="buy_title">选购黑金卡</view>
+       <view class="close_modal" bindtap="hideModal">×</view>
+    </view>
+    <view class="card_view">
+        <view class="card_list" bindtap="checkboxChange" wx:for="{{card_list}}" wx:key="{{index}}" data-cid="{{item.id}}">
+            <checkbox-group bindchange="checkboxChange">
+                <checkbox value="" checked="{{item.checked}}" name="card_id" data-cid="{{item.id}}" class="wx-checkbox-input" bindchange="checkboxChange"/>
+            </checkbox-group>
+            <view class="card_mid">
+                <view class="card_price">{{item.price}}元</view>
+                <view class="card_name">{{item.name}}</view>
+            </view>
+            <view class="card_right">
+                {{item.card_meal}}
+            </view>
+        </view>
+    </view>
+    <view class="buyMoment" bindtap="buyMoment">
+       立即购买
+    </view>
+</view>

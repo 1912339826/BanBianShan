@@ -1,0 +1,29 @@
+<topnav header="{{title}}"></topnav>
+<view class="strategy_wrap gray3 fs26 p40 bf">
+  <view class="fs36 f5 m-t-20">
+      全部攻略
+  </view>
+  <view class="strategy_info_wrap">
+      <view class="flex-rb flex-ac strategy_info m-t-30" 
+       wx:for="{{list}}" 
+       wx:key="index"
+       data-info="{{item}}"
+       catchtap="handleDetail">
+        <image src="{{item.cover}}"></image>
+      <view class="fs32 f5 strategy_info_right flex-rb">
+        <view>
+        {{item.title}}
+        </view>
+          <view class="cf flex-ac">
+            <view class="m-l-5"
+            wx:for="{{item.tags}}" 
+            wx:for-item="tag"
+            wx:for-index="idx"
+            wx:key="idx">
+              <text class="info fs20" >{{tag}}</text>
+            </view>
+          </view>
+      </view>
+      </view>
+  </view>
+</view> 

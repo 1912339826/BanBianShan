@@ -1,0 +1,12 @@
+<topnav header="{{title}}"></topnav>
+<view class="strategy_detail gray3 fs26 p40">
+  <view class="f5 fs36  m-t-40">{{contentData.title}}聊一聊，半边山下为何能持续领跑同行业？</view>
+  <view class="grayc1 m-t-20 m-b-30">
+    <text>{{contentData.des}}</text>
+    <text class="p-l-10">{{contentData.publish_time}}</text>
+  </view>
+  <view class="strategy_info">
+  <import src="../../../wxParse/wxParse.wxml" />
+     <template is="wxParse" data="{{wxParseData: article.nodes}}" />
+  </view>
+</view>

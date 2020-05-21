@@ -1,0 +1,59 @@
+<view class="calendar">
+  <view class=' week_day_wrap fs28 b-b-1 bf flex' catchtap="onPickHeaderClick">
+    <view class="weekday">日</view>
+    <view>一</view>
+    <view>二</view>
+    <view>三</view>
+    <view>四</view>
+    <view>五</view>
+    <view class="weekday">六</view>
+  </view>
+  <view class="week_empty bf">
+
+  </view>
+  <!-- <view class='tit pick-header'>
+		<view class='pre' bindtap='gotoPreMonth'>{{'<'}}</view> 
+		<view class='current' catchtap="onPickHeaderClick">{{currentYear}}年{{currentMonth}}月{{currentDay}}日</view>
+		<view class='next' bindtap='gotoNextMonth'>{{'>'}}</view>
+	</view> -->
+  <view class="content-container fs32" 
+  wx:for="{{startList}}"
+  wx:for-item="itemMonth"
+  wx:key="index">
+    <view class="tc m-t-20 fs26 grayc1 m-b-20">
+      {{itemMonth.yearMonth[0]}}年{{itemMonth.yearMonth[1]}}月
+    </view>
+
+    <view class='content'>
+      <view wx:for="{{itemMonth.preArr}}" 
+      wx:key="index" 
+      class="gray9 dateOn" 
+      data-id="{{item.date}}">
+      {{item.date}}
+      </view>
+      <view wx:for="{{itemMonth.currentArr}}" 
+      wx:for-index="currentindex"
+      wx:key="currentindex" 
+      class='current {{(item.isFill == false && model_id!=0) ? "grayc1":""}} {{item.isCheck == true ? "checkActive":""}} {{item.isLine == true ? "lineActive":""}}  {{(item.currentIndex < currentDay &&  index==0) ? "preGray":""}}' 
+      data-date="{{item.date}}"
+      catchtap="handleCheck">
+       <view class="tc date">{{item.currentIndex}}</view>
+        <view class="calendar_des tc">
+        <text class="fs18" wx:if="{{!item.isFill && model_id!=0}}">
+         {{item.isFill == false ? "满": ""}}
+       </text>
+       <text class="fs18 cf" wx:if="{{(item.isFill || model_id==0)  && item.isStart}}">
+          入店
+       </text>
+       <text class="fs18 cf" wx:if="{{(item.isFill || model_id==0) && item.isEnd}}">
+          离店
+       </text>
+        </view>
+      </view>
+
+
+    </view>
+
+  </view>
+
+</view>

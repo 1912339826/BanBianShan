@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+  },
+  "navigationStyle": "default",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "实体卡绑定",
+  "show":true
+}

@@ -1,0 +1,16 @@
+
+ <topnav header="{{title}}" bind:backInfo="handleTab"></topnav>
+<view class="payInfo_wrap tc gray3 fs26">
+  <image src="/public/icon@3x/icon_pay_success@3x.png"></image>
+  <view class="pay_text_wrap">
+    <view class="f5 fs32 flex-cc">
+    预订成功
+    </view>
+    <view class="flex-cc m-t-20">
+    已成功为您预订{{options.name || ""}}
+    </view>
+  </view>
+  <view class="pay_detail_btn c5 flex-cc fs32 f5" catchtap="handleTab">
+    <text>查看详情</text>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "topnav": "/components/topnav/topnav",
+    "van-search": "/dist/search/index",
+    "van-field": "/dist/field/index"
+  }
+}

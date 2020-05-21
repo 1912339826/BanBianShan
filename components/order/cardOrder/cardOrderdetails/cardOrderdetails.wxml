@@ -1,0 +1,20 @@
+<!--components/cardOrder/cardOrder/cardOrderdetails.wxml-->
+<!-- 订单详情中的订单卡 -->
+<view class="cardOrderdetails">
+  <view class="nameandstate">
+    <view class="nameandimg">
+      <image src="/public/icon@3x/icon_card_tab_hone@3x.png" class="iconcardtabhone"></image>
+      <view class="name">{{storename}}</view>
+      <image src="/public/icon@3x/icon_arrow_black_small@3x.png" class="iconarrowblacksmall"></image>
+    </view>
+  </view>
+
+  <view class="message">
+    <image src="{{secimg}}" class="messageimg"></image>
+    <view class="messagecontent">
+      <view class="name">{{isname}}</view>
+      <view>{{begin_time}} 共{{intervalinfo}}</view>
+      <view>x {{numinfo}}</view>
+    </view>
+  </view>
+</view>

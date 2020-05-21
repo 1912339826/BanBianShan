@@ -1,0 +1,89 @@
+button {
+  height: 90rpx;
+  border-radius: 10rpx;
+  transition: opacity 0.3s;
+}
+button::after {
+  border-width: 0;
+}
+
+button:active {
+  opacity: 0.8;
+}
+.btn-info {
+color: #fff;
+background:linear-gradient(180deg,rgba(208,174,114,1) 0%,rgba(198,155,81,1) 100%);
+}
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(to right , #dd3342, #f86154);
+}
+.btn-default {
+  border: 0 none;
+  background: #fafafa;
+}
+
+.btn-disabled {
+  color: #fff;
+  background: #ccc;
+}
+
+
+.btn_small{
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  width: 150rpx;
+  background: #ddd;
+  color: #666;
+}
+.btn_red{
+  background: red;
+  color: #fff;
+}
+.btn_green{
+  background: #00c507;
+color: #fff;
+}
+.btn_blue{
+   background: #0f6ab4;
+color: #fff;
+}
+.pagebtn{
+  background: #fff;
+  z-index: 999;
+  position: fixed;
+  height: 120rpx;
+  width: 100%;
+  bottom: 0;
+}
+
+/* 底部按钮群 */
+.footer_btnswrap{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20rpx 0 0;
+  background: #fff;
+  z-index: 999;
+  border-top: 20rpx solid;
+  border-image: -webkit-linear-gradient(to bottom, #fff, #ddd) 30 30;
+  border-image: -moz-linear-gradient(to bottom, #fff, #ddd) 30 30;
+  border-image: linear-gradient(to bottom, #fff, #d7d7d7) 30 30;
+}
+
+/* 固定底部按钮 */
+.btn_sub_empty{
+  height: 128rpx;
+}
+
+.btn_sub_wrap{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.btn-sub{
+  height:88rpx;
+  background:linear-gradient(180deg,rgba(208,174,114,1) 0%,rgba(198,155,81,1) 100%);
+}

@@ -1,0 +1,29 @@
+<!-- 首页中新品民宿，小个体 -->
+<view class="zooid" catchtap="goDetail">
+  <view class="zooidbox" >
+    <view class="img">
+      <image src="{{listItem.cover}}" class="w100"></image>
+      <view class="cornermark">上新</view>
+    </view>
+
+    <view class="nameandmoney">
+      <view class="name">{{listItem.name}}</view>
+      <view class="money"> 押金 ￥{{low_price}} 起</view>
+    </view>
+
+    <view class="siteanddistance">
+      <view class="site">{{listItem.city_name}}</view>
+      <view class="distance">
+        <image src="/public/icon@3x/icon_location_grey_small@3x.png" class="icon"></image> {{listItem.distance_info}}</view>
+    </view>
+    <view class="tagandbutton">
+      <view class="tag">
+        <view wx:for="{{listItem.tag}}"  
+        wx:key="index"
+        wx:for-item="tags" class='tags {{tags.is_red== 1? "tag_active": ""}}'>{{tags.name}}</view>
+      </view> 
+      <view class="button">立即预定</view>
+    </view>
+  </view>
+
+</view>

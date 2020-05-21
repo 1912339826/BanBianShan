@@ -1,0 +1,188 @@
+@import "../../app.wxss";
+.calendar {
+  width: 100%;
+  background: #fff;
+}
+
+.calendar .tit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #2a2a2a;
+  padding: 10rpx 0;
+}
+
+/* .calendar .tit .date {
+  margin: 0 40rpx;
+} */
+
+.calendar .content {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding-left: 25rpx;
+  
+}
+.week_day_wrap >view{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.calendar .content .current {
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  position: relative;
+  flex-shrink: 0;
+   /* margin: 0 40rpx; */
+}
+.calendar .content .current .date{
+  height: 0rpx;
+}
+
+.calendar .content .gray9 {
+  color: #999;
+}
+
+
+
+.calendar .dateCa {
+  border-radius: 10rpx;
+  border: 1rpx solid #108EE9;
+  color: #108EE9;
+}
+.calendar .dateToday{
+ background-color: #108EE9;
+   border-radius: 10rpx;
+    color: #fff;
+}
+
+
+.week_day_wrap{
+  position: fixed;
+  width: 100%;
+  top: 120rpx;
+  padding: 15rpx 25rpx 0;
+}
+.week_day_wrap>view{
+  width: 100rpx;
+  height: 100rpx;
+}
+.week_empty{
+  height: 102rpx;
+}
+.week_day_wrap .weekday{
+  color: #C19A55;
+}
+.checkActive{
+  background:rgba(193,154,85,1);
+ opacity:0.5;
+}
+.lineActive{
+  background:rgba(193,154,85,1);
+  opacity: 1;
+  color: #fff;
+}
+.preGray{
+  color:#c1c1c1;
+ opacity:0.5;
+}
+.calendar_des{
+  position: absolute;
+  height: 0rpx;
+  bottom: 180rpx;
+  width: 100rpx;
+  text-align: center;
+}
+.week_day_wrap{
+  z-index: 2;
+}
+.content-container{
+   z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 下拉效果 */
+
+/* .calendar .content-container {
+  width: 100%;
+  position: absolute;
+} */
+
+/*筛选头部*/
+
+/* .calendar .pick-header {
+  width: 100%;
+  height: 72rpx;
+  z-index: 60;
+  position: absolute;
+  background-color: #fff;
+} */
+
+/*筛选项容器布局*/
+
+/* .calendar .pick-container {
+  width: 100%;
+  height: 800rpx;
+  background-color: #fff;
+  position: absolute;
+  z-index: 50;
+  top: 800rpx;
+} */
+
+/*筛选项隐藏 显示动画 start*/
+/* 
+@keyframes slidown {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
+.calendar .slidown {
+  display: block;
+  animation: slidown 0.1s ease-in both;
+}
+@keyframes slidup {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+} */
+/* .slidup {
+  display: block;
+  animation: slidup 0.2s ease-in both;
+} */
+/*内容容器布局*/
+
+/* .calendar .content {
+  width: 100%;
+  position: absolute;
+  top: 72rpx;
+  z-index: 20;
+} */

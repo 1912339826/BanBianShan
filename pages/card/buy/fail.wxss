@@ -1,0 +1,48 @@
+
+page{
+  background: #fff;
+}
+.content{
+  border-top: 1px dashed #000;
+}
+.suc_icon{
+  width:158rpx !important;
+  height:158rpx !important;
+  display: block;
+  margin: 100rpx auto 50rpx;
+}
+.suc_text{
+  width:129rpx;
+  height:45rpx;
+  font-size:32rpx;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+  line-height:45rpx;
+  margin: 0 auto;
+}
+.suc_desc{
+  width:364rpx;
+  height:37rpx;
+  font-size:26rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:37rpx;
+  margin: 20rpx auto 100rpx;
+}
+.check_view{
+width:670rpx;
+height:88rpx;
+background:rgba(255,255,255,1);
+border:2px solid rgba(193,154,85,1);
+background:rgba(255,255,255,1);
+font-size:32rpx;
+font-family:PingFangSC-Medium,PingFang SC;
+font-weight:500;
+color:rgba(193,154,85,1);
+line-height:80rpx;
+text-align: center;
+margin: 0 auto;
+margin-top: 140rpx;
+}

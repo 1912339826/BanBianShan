@@ -1,0 +1,18 @@
+/**app.wxss**/
+@import './styles/index.wxss';
+
+page {
+  padding: 0 !important;
+  height: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  /* border-top: 1px solid #eee; */
+  font-size: 28rpx;
+  --color-primary: #f94650;
+  --color-bg: #f5f5f5;
+  --color-blue: #0f6ab4;
+  --color-border: #eee;
+  --font-color-base: #101010;
+  color: var(--font-color-base);
+  background: #f5f5f5;
+}

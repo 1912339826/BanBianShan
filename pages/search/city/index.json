@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "topnav": "/components/topnav/topnav",
+    "van-index-bar": "/dist/index-bar/index",
+    "van-index-anchor": "/dist/index-anchor/index",
+    "van-cell": "/dist/cell/index"
+  }
+}

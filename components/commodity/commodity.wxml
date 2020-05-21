@@ -1,0 +1,18 @@
+<!--components/commodity/commodity.wxml-->
+<view class="commodity">
+  <view class="list">
+    <view class="listchild" wx:for="{{arr}}" wx:key="index">
+      <view class="listchildtop">
+        <image alt="." src="{{item.picture[0].url}}" style="width: 314rpx;height: 214rpx; background-color: #D8D8D8;" data-isid="{{item.id}}" bindtap="gothisdetails" />
+        <view class="tag">{{item.title}}</view>
+      </view>
+      <view class="listchildbottom">
+        <view class="title">{{item.description}}</view>
+        <view class="moneyandclick">
+          <view class="txt">￥{{item.price}}</view>
+          <ccon name="add" data-item="{{item}}" bindclick="click" color="#D0AE72" size="22px" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

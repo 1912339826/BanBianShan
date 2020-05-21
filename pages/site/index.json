@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "topnav": "/components/topnav/topnav",
+    "Field":"/dist/field/index",
+    "Popup":"/dist/popup/index",
+    "Area":"/dist/area/index"
+  }
+}

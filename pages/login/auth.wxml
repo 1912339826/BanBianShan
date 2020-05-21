@@ -1,0 +1,28 @@
+
+<view class='panel-login'>
+    <image class="login-bg" src="../../static/imgs/login_bg.png" />
+    <view class='info'>
+        <view class="top-navigation"  style="top: {{ statusBarHeight + 'px'}}" >
+			<navigator class="back-box" delta="1"  open-type="navigateBack">
+				<view class="navigation-back hairline-in-pseudo-right"></view>
+			</navigator>
+			<navigator url="/page/index/index" open-type="switchTab" class="navigation-home"></navigator>
+		</view>
+        <view class='logo-w hairline-in-pseudo-fouredges'>
+            <image class='logo' src='../../static/imgs/test/page-icon.png'></image>
+        </view>
+        <view class='system-name ly-h3 bold'>成长树早教</view>
+        <view class="ly-h4 yellow-dark mt10">用心做教育 领军行业</view>
+        <view class="tips ly-h4 gray-dark">·使用手机号登录成长树早教</view>
+        <!-- open-type='getUserInfo' bindgetuserinfo="onGetUserLoginInfo" -->
+        <button open-type='getPhoneNumber' bindgetphonenumber="onGetUserPhoneNumber" type='primary' class="ly-btn btn-auth doc-row row-center col-center mt30">
+            <image class="icon-auth" src="../../static/imgs/icon_weixin.png"></image>
+            <text>微信手机号快捷授权</text>
+        </button>
+        <button bindtap="gologin" class="otherphone ly-btn btn-auth doc-row row-center col-center mt40">
+            <text>其他手机号登录</text>
+        </button>
+        <view bindtap="outLogin" class="goround ly-h4 mt40">暂不登录，我先逛逛</view>
+    </view>
+</view>
+

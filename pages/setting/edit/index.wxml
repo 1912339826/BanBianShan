@@ -1,0 +1,21 @@
+<view class="edit_wrap gray3">
+<topnav header="{{title}}"></topnav>
+  <van-field
+    value="{{ nickname }}"
+    placeholder=""
+    border="{{ false }}"
+    bind:change="handleChange"
+    clearable
+  />
+</view>
+
+<view class="btn_sub_empty">
+
+</view>
+<view class="btn_sub_wrap">
+  <view class="bf p40 p-t-20 p-b-20">
+      <view class="btn-sub cf flex-cc fs32" bindtap="upNickName">
+        <text>保存修改</text>
+      </view>
+  </view>
+</view>
